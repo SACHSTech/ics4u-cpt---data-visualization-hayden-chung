@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.scene.layout.StackPane;
 import javafx.scene.control.Button;
 import javafx.application.Application;
+import javafx.scene.layout.VBox;
 
 public class MainMenu extends Application {
 
@@ -21,14 +22,27 @@ public class MainMenu extends Application {
         mainStage.setWidth(500);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
-        Scene scene = new Scene(button1, 200, 200);
         button1.setMaxSize(100, 50);
-        mainStage.setScene(scene);
-
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hi");
+            }
+        });
+        
         Button button2 =new Button("Raptors 2019-2020 Season");
-        Scene scene1 = new Scene(button2, 100, 200);
         button2.setMaxSize(100, 50);
-        mainStage.setScene(scene1);
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello");
+            }
+        });
+        
+        VBox VBoxMenu = new VBox(button1, button2);
+        mainStage.setScene(new Scene(VBoxMenu));
         mainStage.show();
     }
 }
