@@ -22,26 +22,27 @@ public class MainMenu extends Application {
         mainStage.setWidth(500);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
-        button1.setMaxSize(100, 50);
+        button1.setMaxSize(200, 100);
         button1.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                //System.out.println("Hi");
+                System.out.println("1st Button Clicked");
             }
         });
         
         Button button2 =new Button("Raptors 2019-2020 Season");
-        button2.setMaxSize(100, 50);
+        button2.setMaxSize(200, 100);
         button2.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                // System.out.println("Hello");
+                 System.out.println("2nd Button Clicked");
             }
         });
         
         VBox VBoxMenu = new VBox(button1, button2);
+        VBoxMenu.setSpacing(15);
         mainStage.setScene(new Scene(VBoxMenu));
         mainStage.show();
     }
