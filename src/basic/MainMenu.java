@@ -17,13 +17,17 @@ public class MainMenu extends Application {
     @Override
     public void start(Stage mainStage)  {
         mainStage.setTitle("Toronto Raptors database");
+        mainStage.setHeight(500);
+        mainStage.setWidth(500);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
         Scene scene = new Scene(button1, 200, 200);
+        button1.setMaxSize(100, 50);
         mainStage.setScene(scene);
 
         Button button2 =new Button("Raptors 2019-2020 Season");
         Scene scene1 = new Scene(button2, 100, 200);
+        button2.setMaxSize(100, 50);
         mainStage.setScene(scene1);
         mainStage.show();
     }
