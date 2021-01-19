@@ -27,7 +27,7 @@ public class MainMenu extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hi");
+                //System.out.println("Hi");
             }
         });
         
@@ -37,7 +37,7 @@ public class MainMenu extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello");
+                // System.out.println("Hello");
             }
         });
         
