@@ -1,5 +1,8 @@
 package basic;
 
+import java.io.*;
+import java.util.*;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.BooleanProperty;
@@ -92,5 +95,21 @@ public class sportslist {
 
     public StringProperty gameStreakProperty() {
         return gameStreak;
+    }
+
+    public static ArrayList<sportslist> csvToObject(String fileName) throws IOException {
+        BufferedReader CSVFile = new BufferedReader(new FileReader(fileName));
+        ArrayList<sportslist> SportsList = new ArrayList<>();
+        
+        while (CSVFile.readLine() != null) {
+
+            String[] sportsCsv = CSVFile.readLine().split(",");
+
+
+        }
+        
+
+        
+
     }
 }
