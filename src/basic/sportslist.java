@@ -15,6 +15,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 
 public class SportsList {
 
+
     private IntegerProperty gameNumber;
     private StringProperty dateNumber;
     private StringProperty gameTime;
@@ -89,7 +90,7 @@ public class SportsList {
         return totalWins;
     }
 
-    public IntegerProperty totalLossesProperty() {
+    public IntegerProperty totalLosesProperty() {
         return totalLoses;
     }
 
@@ -105,8 +106,8 @@ public class SportsList {
         this.dateNumber = new SimpleStringProperty(dateNumber);
     }
 
-    public void setDateTime(String dateTime) {
-        this.gameTime = new SimpleStringProperty(dateTime);
+    public void setDateTime(String gameTime) {
+        this.gameTime = new SimpleStringProperty(gameTime);
     }
 
     public void setBestPlayer(String bestPlayer) {
@@ -121,19 +122,46 @@ public class SportsList {
         this.gameOpponent = new SimpleStringProperty(gameOpponent);
     }
 
-    p
+    public void setGameResult(String gameResult) {
+        this.gameResult = new SimpleStringProperty(gameResult);
+    }
+
+    public void setGameLength(String gameLength) {
+        this.gameLength = new SimpleStringProperty(gameLength);
+    }
+
+    public void setRaptorScore(int raptorScore) {
+        this.raptorScore = new SimpleIntegerProperty(raptorScore);
+    }
+
+    public void setOpponentScore(int opponentScore) {
+        this.opponentScore = new SimpleIntegerProperty(opponentScore);
+    }
+
+    public void setTotalWins(int totalWins) {
+        this.totalWins = new SimpleIntegerProperty(totalWins);
+    }
+
+    public void setTotalLosses(int totalLoses) {
+        this.totalLoses = new SimpleIntegerProperty(totalLoses);
+    }
+
+    public void setGameStreak(String gameStreak) {
+        this.gameStreak = new SimpleStringProperty(gameStreak);
+    }
 
     public static ArrayList<SportsList> csvToObject(String fileName) throws IOException {
         BufferedReader CSVFile = new BufferedReader(new FileReader(fileName));
         ArrayList<SportsList> SportsList = new ArrayList<>();
 
-        while (CSVFile.readLine() != null) {
+        String strLoop;
+        while ((strLoop = CSVFile.readLine()) != null) {
 
             String[] sportsCsv = CSVFile.readLine().split(",");
             
             SportsList sportsObj = new SportsList(0, "", "", "", "", "", "", "", 0, 0, 0, 0, "");
 
-            sportsObj.setGameNumber(Integer.parseInt(sportsCsv[0]);
+            sportsObj.setGameNumber(Integer.parseInt(sportsCsv[0]));
             sportsObj.setDateNumber(sportsCsv[1]);
             sportsObj.setDateTime(sportsCsv[2]);
             sportsObj.setBestPlayer(sportsCsv[3]);
@@ -141,10 +169,10 @@ public class SportsList {
             sportsObj.setGameOpponent(sportsCsv[5]);
             sportsObj.setGameResult(sportsCsv[6]);
             sportsObj.setGameLength(sportsCsv[7]);
-            sportsObj.setRaptorScore(sportsCsv[8]);
-            sportsObj.setOpponentScore(sportsCsv[9]);
-            sportsObj.setTotalWins(sportsCsv[10]);
-            sportsObj.setTotalLosses(sportsCsv[11]);
+            sportsObj.setRaptorScore(Integer.parseInt(sportsCsv[8]));
+            sportsObj.setOpponentScore(Integer.parseInt(sportsCsv[9]));
+            sportsObj.setTotalWins(Integer.parseInt(sportsCsv[10]));
+            sportsObj.setTotalLosses(Integer.parseInt(sportsCsv[11]));
             sportsObj.setGameStreak(sportsCsv[12]);
 
             SportsList.add(sportsObj);
