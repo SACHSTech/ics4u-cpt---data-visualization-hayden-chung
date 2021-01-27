@@ -13,7 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Database {
+public class Database  { 
 
     public static Parent createContent(ArrayList<SportsList> Sports) {
         final ObservableList<SportsList> data = FXCollections.observableArrayList(Sports);
@@ -76,9 +76,9 @@ public class Database {
         return tableView;
     }
     
-    public static void DataBaseScreen (Stage primaryStage, ArrayList<SportsList> Sports) {
+    public static void DataBaseScreen (Stage primaryStage, ArrayList<SportsList> SportsList) {
 
-        primaryStage.setScene(new Scene(createContent(Sports)));
+        primaryStage.setScene(new Scene(createContent(SportsList)));
         primaryStage.show();
     }
 }

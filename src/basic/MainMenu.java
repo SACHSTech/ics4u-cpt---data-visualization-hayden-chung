@@ -1,5 +1,7 @@
 package basic;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.event.ActionEvent;
@@ -16,10 +18,12 @@ public class MainMenu extends Application {
     }
 
     @Override
-    public void start(Stage mainStage)  {
-        mainStage.setTitle("Toronto Raptors database");
-        mainStage.setHeight(500);
-        mainStage.setWidth(500);
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setTitle("Toronto Raptors database");
+        primaryStage.setHeight(700);
+        primaryStage.setWidth(700);
+        String fileName = "src/basic/sports.csv";
+        ArrayList<SportsList> SportsList = basic.SportsList.csvToObject(fileName);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
         button1.setMaxSize(200, 100);
@@ -27,23 +31,14 @@ public class MainMenu extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("1st Button Clicked");
+                Database.DataBaseScreen(primaryStage, SportsList);
             }
         });
         
-        Button button2 =new Button("Raptors 2019-2020 Season");
-        button2.setMaxSize(200, 100);
-        button2.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                 System.out.println("2nd Button Clicked");
-            }
-        });
         
-        VBox VBoxMenu = new VBox(button1, button2);
+        VBox VBoxMenu = new VBox(button1);
         VBoxMenu.setSpacing(15);
-        mainStage.setScene(new Scene(VBoxMenu));
-        mainStage.show();
+        primaryStage.setScene(new Scene(VBoxMenu));
+        primaryStage.show();
     }
 }
