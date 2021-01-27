@@ -5,12 +5,8 @@ import java.util.*;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 
 
 public class SportsList {
@@ -142,7 +138,7 @@ public class SportsList {
         this.totalWins = new SimpleIntegerProperty(totalWins);
     }
 
-    public void setTotalLosses(int totalLoses) {
+    public void setTotalLoses(int totalLoses) {
         this.totalLoses = new SimpleIntegerProperty(totalLoses);
     }
 
@@ -172,7 +168,7 @@ public class SportsList {
             sportsObj.setRaptorScore(Integer.parseInt(sportsCsv[8]));
             sportsObj.setOpponentScore(Integer.parseInt(sportsCsv[9]));
             sportsObj.setTotalWins(Integer.parseInt(sportsCsv[10]));
-            sportsObj.setTotalLosses(Integer.parseInt(sportsCsv[11]));
+            sportsObj.setTotalLoses(Integer.parseInt(sportsCsv[11]));
             sportsObj.setGameStreak(sportsCsv[12]);
 
             SportsList.add(sportsObj);
