@@ -13,7 +13,7 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
 
-public class sportslist {
+public class SportsList {
 
     private IntegerProperty gameNumber;
     private StringProperty dateNumber;
@@ -29,7 +29,7 @@ public class sportslist {
     private IntegerProperty totalLoses;
     private StringProperty gameStreak;
 
-    public sportslist(int gameNumber, String dateNumber, String gameTime, String bestPlayer, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLoses, String gameStreak) {
+    public SportsList(int gameNumber, String dateNumber, String gameTime, String bestPlayer, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLoses, String gameStreak) {
         this.gameNumber = new SimpleIntegerProperty(gameNumber);
         this.dateNumber = new SimpleStringProperty(dateNumber);
         this.gameTime = new SimpleStringProperty(gameTime);
@@ -97,19 +97,59 @@ public class sportslist {
         return gameStreak;
     }
 
-    public static ArrayList<sportslist> csvToObject(String fileName) throws IOException {
+    public void setGameNumber(int gameNumber) {
+        this.gameNumber = new SimpleIntegerProperty(gameNumber);
+    }
+
+    public void setDateNumber(String dateNumber) {
+        this.dateNumber = new SimpleStringProperty(dateNumber);
+    }
+
+    public void setDateTime(String dateTime) {
+        this.gameTime = new SimpleStringProperty(dateTime);
+    }
+
+    public void setBestPlayer(String bestPlayer) {
+        this.bestPlayer = new SimpleStringProperty(bestPlayer);
+    }
+
+    public void setGameLocation(String gameLocation) {
+        this.gameLocation = new SimpleStringProperty(gameLocation);
+    }
+
+    public void setGameOpponent(String gameOpponent) {
+        this.gameOpponent = new SimpleStringProperty(gameOpponent);
+    }
+
+    p
+
+    public static ArrayList<SportsList> csvToObject(String fileName) throws IOException {
         BufferedReader CSVFile = new BufferedReader(new FileReader(fileName));
-        ArrayList<sportslist> SportsList = new ArrayList<>();
-        
+        ArrayList<SportsList> SportsList = new ArrayList<>();
+
         while (CSVFile.readLine() != null) {
 
             String[] sportsCsv = CSVFile.readLine().split(",");
+            
+            SportsList sportsObj = new SportsList(0, "", "", "", "", "", "", "", 0, 0, 0, 0, "");
 
+            sportsObj.setGameNumber(Integer.parseInt(sportsCsv[0]);
+            sportsObj.setDateNumber(sportsCsv[1]);
+            sportsObj.setDateTime(sportsCsv[2]);
+            sportsObj.setBestPlayer(sportsCsv[3]);
+            sportsObj.setGameLocation(sportsCsv[4]);
+            sportsObj.setGameOpponent(sportsCsv[5]);
+            sportsObj.setGameResult(sportsCsv[6]);
+            sportsObj.setGameLength(sportsCsv[7]);
+            sportsObj.setRaptorScore(sportsCsv[8]);
+            sportsObj.setOpponentScore(sportsCsv[9]);
+            sportsObj.setTotalWins(sportsCsv[10]);
+            sportsObj.setTotalLosses(sportsCsv[11]);
+            sportsObj.setGameStreak(sportsCsv[12]);
 
+            SportsList.add(sportsObj);
         }
-        
-
-        
-
+        CSVFile.close();
+        return SportsList;
     }
 }
