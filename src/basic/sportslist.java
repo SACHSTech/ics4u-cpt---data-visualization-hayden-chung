@@ -1,190 +1,84 @@
 package basic;
 
-import java.io.*;
-import java.util.*;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-
 
 public class SportsList {
+    private int intGameNumber;
+    private String strDateNumber;
+    private String strGameTime;
+    private String strGameLocation;
+    private String strGameOpponent;
+    private String strGameResult;
+    private String strGameLength;
+    private int intRaptorScore;
+    private int intOpponentScore;
+    private int intTotalWins;
+    private int intTotalLosses;
+    private String strGameStreak;
 
-
-    private IntegerProperty gameNumber;
-    private StringProperty dateNumber;
-    private StringProperty gameTime;
-    private StringProperty bestPlayer;
-    private StringProperty gameLocation;
-    private StringProperty gameOpponent;
-    private StringProperty gameResult;
-    private StringProperty gameLength;
-    private IntegerProperty raptorScore;
-    private IntegerProperty opponentScore;
-    private IntegerProperty totalWins;
-    private IntegerProperty totalLoses;
-    private StringProperty gameStreak;
-
-    public SportsList(int gameNumber, String dateNumber, String gameTime, String bestPlayer, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLoses, String gameStreak) {
-        this.gameNumber = new SimpleIntegerProperty(gameNumber);
-        this.dateNumber = new SimpleStringProperty(dateNumber);
-        this.gameTime = new SimpleStringProperty(gameTime);
-        this.bestPlayer = new SimpleStringProperty(bestPlayer);
-        this.gameLocation = new SimpleStringProperty(gameLocation);
-        this.gameOpponent = new SimpleStringProperty(gameOpponent);
-        this.gameResult = new SimpleStringProperty(gameResult);
-        this.gameLength = new SimpleStringProperty(gameLength);
-        this.raptorScore = new SimpleIntegerProperty(raptorScore);
-        this.opponentScore = new SimpleIntegerProperty(opponentScore);
-        this.totalWins = new SimpleIntegerProperty(totalWins);
-        this.totalLoses = new SimpleIntegerProperty(totalLoses);
-        this.gameStreak = new SimpleStringProperty(gameStreak);
+    public SportsList(int gameNumber, String dateNumber, String gameTime, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLosses, String gameStreak) {
+        this.intGameNumber = gameNumber;
+        this.strDateNumber = dateNumber;
+        this.strGameTime = gameTime;
+        this.strGameLocation = gameLocation;
+        this.strGameOpponent = gameOpponent;
+        this.strGameResult = gameResult;
+        this.strGameLength = gameLength;
+        this.intRaptorScore = raptorScore;
+        this.intOpponentScore = opponentScore;
+        this.intTotalWins = totalWins;
+        this.intTotalLosses = totalLosses;
+        this.strGameStreak = gameStreak;
     }
 
-    public StringProperty getGameStreak() {
-        return gameStreak;
+    public int getGameNumber() {
+        return intGameNumber;
     }
 
-    public IntegerProperty gameNumberProperty() {
-        return gameNumber;
+    public String getDateNumber() {
+        return strDateNumber;
     }
 
-    public StringProperty dateNumberProperty() {
-        return dateNumber;
+    public String getGameTime() {
+        return strGameTime;
     }
 
-    public StringProperty gameTimeProperty() {
-        return gameTime; 
+    public String getGameLocation() {
+        return strGameLocation;
     }
 
-    public StringProperty bestPlayerProperty() {
-        return bestPlayer;
+    public String getGameOpponent() {
+        return strGameOpponent;
     }
 
-    public StringProperty gameLocationProperty() {
-        return gameLocation;
+    public String getGameResult() {
+        return strGameResult;
     }
 
-    public StringProperty gameOpponentProperty() {
-        return gameOpponent;
+    public String getGameLength() {
+        return strGameLength;
     }
 
-    public StringProperty gameResultProperty() {
-        return gameResult;
+    public int getRaptorScore() {
+        return intRaptorScore;
     }
 
-    public StringProperty gameLengthProperty() {
-        return gameLength;
+    public int getOpponentScore() {
+        return intOpponentScore;
     }
 
-    public IntegerProperty raptorScoreProperty() {
-        return raptorScore;
+    public int getTotalWins() {
+        return intTotalWins;
     }
 
-    public IntegerProperty opponentScoreProperty() {
-        return opponentScore;
+    public int getTotalLosses() {
+        return intTotalLosses;
     }
 
-    public IntegerProperty totalWinsProperty() {
-        return totalWins;
+    public String getGameStreak() {
+        return strGameStreak;
     }
 
-    public IntegerProperty totalLosesProperty() {
-        return totalLoses;
-    }
-
-    public StringProperty gameStreakProperty() {
-        return gameStreak;
-    }
-
-    public void setGameNumber(int gameNumber) {
-        this.gameNumber = new SimpleIntegerProperty(gameNumber);
-    }
-
-    public void setDateNumber(String dateNumber) {
-        this.dateNumber = new SimpleStringProperty(dateNumber);
-    }
-
-    public void setDateTime(String gameTime) {
-        this.gameTime = new SimpleStringProperty(gameTime);
-    }
-
-    public void setBestPlayer(String bestPlayer) {
-        this.bestPlayer = new SimpleStringProperty(bestPlayer);
-    }
-
-    public void setGameLocation(String gameLocation) {
-        this.gameLocation = new SimpleStringProperty(gameLocation);
-    }
-
-    public void setGameOpponent(String gameOpponent) {
-        this.gameOpponent = new SimpleStringProperty(gameOpponent);
-    }
-
-    public void setGameResult(String gameResult) {
-        this.gameResult = new SimpleStringProperty(gameResult);
-    }
-
-    public void setGameLength(String gameLength) {
-        this.gameLength = new SimpleStringProperty(gameLength);
-    }
-
-    public void setRaptorScore(int raptorScore) {
-        this.raptorScore = new SimpleIntegerProperty(raptorScore);
-    }
-
-    public void setOpponentScore(int opponentScore) {
-        this.opponentScore = new SimpleIntegerProperty(opponentScore);
-    }
-
-    public void setTotalWins(int totalWins) {
-        this.totalWins = new SimpleIntegerProperty(totalWins);
-    }
-
-    public void setTotalLoses(int totalLoses) {
-        this.totalLoses = new SimpleIntegerProperty(totalLoses);
-    }
-
-    public void setGameStreak(String gameStreak) {
-        this.gameStreak = new SimpleStringProperty(gameStreak);
-    }
-
-    public static ArrayList<SportsList> csvToObject(String fileName) throws IOException {
-        fileName = "src/basic/sports.csv";
-        
-        BufferedReader CSVFile = new BufferedReader(new FileReader("src/basic/sports.csv"));
-        ArrayList<SportsList> Sports = new ArrayList<>();
-        
-        String line;
-        while ((line = CSVFile.readLine()) != null) {
-            
-            String[] sportsCsv = line.split(",");
-            
-            SportsList sportsObj = new SportsList(0, "", "", "", "", "", "", "", 0, 0, 0, 0, "");
-
-            sportsObj.setGameNumber(Integer.parseInt(sportsCsv[0]));
-            sportsObj.setDateNumber(sportsCsv[1]);
-            sportsObj.setDateTime(sportsCsv[2]);
-            sportsObj.setBestPlayer(sportsCsv[3]);
-            sportsObj.setGameLocation(sportsCsv[4]);
-            sportsObj.setGameOpponent(sportsCsv[5]);
-            sportsObj.setGameResult(sportsCsv[6]);
-            sportsObj.setGameLength(sportsCsv[7]);
-            sportsObj.setRaptorScore(Integer.parseInt(sportsCsv[8]));
-            sportsObj.setOpponentScore(Integer.parseInt(sportsCsv[9]));
-            sportsObj.setTotalWins(Integer.parseInt(sportsCsv[10]));
-            sportsObj.setTotalLoses(Integer.parseInt(sportsCsv[11]));
-            sportsObj.setGameStreak(sportsCsv[12]);
-
-            Sports.add(sportsObj);
-        }
-        CSVFile.close();
-        return Sports;
+    public String toString() {
+        return this.intGameNumber + " - " + this.strDateNumber + " - " + this.strGameTime + " - " + this.strGameLocation + " - " + this.strGameOpponent + " - " + this.strGameResult + " - " + this.strGameLength + " - " + this.intRaptorScore + " - " + this.intOpponentScore + " - " + this.intTotalWins + " - " + this.intTotalLosses + " - " + this.strGameStreak;
     }
 }
