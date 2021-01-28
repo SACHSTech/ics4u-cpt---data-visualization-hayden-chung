@@ -28,7 +28,10 @@ public class MainMenu {
         String strGameStreak;
         SportsList sportsList;
 
-        SportsList[] Sports = new SportsList[106];
+        String strOpponentChoice;
+
+
+        SportsList[] sportsArray = new SportsList[106];
 
         BufferedReader SportsData = new BufferedReader(new FileReader("src/basic/sports.csv"));
 
@@ -50,12 +53,18 @@ public class MainMenu {
             strGameStreak = sportsCsv[11];
             
             sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak);
-            Sports[intCount] = sportsList;
+            sportsArray[intCount] = sportsList;
         }
 
         SportsData.close();
 
-        System.out.println(DataSorting.averagePoints(Sports));
+        System.out.println("Type in opponent you want to search");
+        strOpponentChoice = keyboard.readLine();
+        
+        System.out.println(DataSorting.searchHome(sportsArray, "Home"));
+        System.out.println(DataSorting.averagePoints(sportsArray));
+        System.out.println(DataSorting.averagePoints2(sportsArray));
+        System.out.println(DataSorting.searchOpponent(sportsArray, strOpponentChoice));
     }
 
 }
