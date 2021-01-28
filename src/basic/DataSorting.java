@@ -67,7 +67,115 @@ public class DataSorting {
         }
     }
 
-    public 
+    public static String sortHighestPoints(SportsList[] sportsArray) {
 
+        int intCurrentPoints;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            intCurrentPoints = intCount;
+
+            for(int intCount1 = intCount + 1; intCount1 < sportsArray.length; intCount1++) {
+                if(sportsArray[intCount1].getRaptorScore() > sportsArray[intCurrentPoints].getRaptorScore()) {
+                    intCurrentPoints = intCount1;
+                }
+            }
+            if(intCount != intCurrentPoints) {
+                SportsList points = sportsArray[intCurrentPoints];
+                sportsArray[intCurrentPoints] = sportsArray[intCount];
+                System.out.println(sportsArray[intCount] = points);
+            }
+        }
+        return "Sorted by printing out Raptors Score from highest to lowest";
+    }
+
+    public static String sortLowestPoints(SportsList[] sportsArray) {
+
+        int intCurrentPoints;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            intCurrentPoints = intCount;
+
+            for(int intCount1 = intCount + 1; intCount1 < sportsArray.length; intCount1++) {
+                if(sportsArray[intCount1].getRaptorScore() < sportsArray[intCurrentPoints].getRaptorScore()) {
+                    intCurrentPoints = intCount1;
+                }
+            }
+            if(intCount != intCurrentPoints) {
+                SportsList points = sportsArray[intCurrentPoints];
+                sportsArray[intCurrentPoints] = sportsArray[intCount];
+                System.out.println(sportsArray[intCount] = points);
+            }
+        }
+        return "Sorted by printing out Raptors Score from lowest to highest";
+    }
+
+    public static String sortHighestOpponentPoints(SportsList[] sportsArray) {
+
+        int intCurrentPoints;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            intCurrentPoints = intCount;
+
+            for(int intCount1 = intCount + 1; intCount1 < sportsArray.length; intCount1++) {
+                if(sportsArray[intCount1].getOpponentScore() > sportsArray[intCurrentPoints].getOpponentScore()) {
+                    intCurrentPoints = intCount1;
+                }
+            }
+            if(intCount != intCurrentPoints) {
+                SportsList points = sportsArray[intCurrentPoints];
+                sportsArray[intCurrentPoints] = sportsArray[intCount];
+                System.out.println(sportsArray[intCount] = points);
+            }
+        }
+        return "Sort games by Opponent Score from Highest to lowest";
+    }
+
+    public static String sortLowestOpponentPoints(SportsList[] sportsArray) {
+
+        int intCurrentPoints;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            intCurrentPoints = intCount;
+
+            for(int intCount1 = intCount + 1; intCount1 < sportsArray.length; intCount1++) {
+                if(sportsArray[intCount1].getOpponentScore() < sportsArray[intCurrentPoints].getOpponentScore()) {
+                    intCurrentPoints = intCount1;
+                }
+            }
+            if(intCount != intCurrentPoints) {
+                SportsList points = sportsArray[intCurrentPoints];
+                sportsArray[intCurrentPoints] = sportsArray[intCount];
+                System.out.println(sportsArray[intCount] = points);
+            }
+        }
+        return "Sort games by Opponent Score from Lowest to highest";
+    }
+
+    public static String searchResults(SportsList[] sportsArray, String strResults) {
+        String strResults1;
+        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
+            strResults1 = sportsArray[intCount].getGameResult();
+            if(strResults1.equals(strResults)) {
+                System.out.println(sportsArray[intCount].toString());
+            }
+        }
+        return "Sorted by wins or losses";
+    }
+
+    public static String searchRegular(SportsList[] sportsArray) {
+        for(int intCount = 0; intCount < 82; intCount++) {
+            System.out.println(sportsArray[intCount].toString());
+        }
+        return "Regular season games only";
+    }
+
+    public static String searchPlayoff(SportsList[] sportsArray) {
+        for(int intCount = 0; intCount < 106; intCount++) {
+            if(intCount >= 82){
+                System.out.println(sportsArray[intCount].toString());
+            }
+        }
+        return "Playoff games only";
+    }
     
 }

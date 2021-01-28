@@ -7,6 +7,7 @@ import java.io.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.util.Arrays;
 
 public class MainMenu {
 
@@ -31,6 +32,7 @@ public class MainMenu {
         String strOpponentChoice;
         String strLocation;
         int intGameNumber1;
+        String strWinsOrLoss;
 
         SportsList[] sportsArray = new SportsList[106];
 
@@ -58,7 +60,18 @@ public class MainMenu {
         }
 
         SportsData.close();
-
+        //System.out.println(DataSorting.searchRegular(sportsArray));
+        System.out.println(DataSorting.searchPlayoff(sportsArray));
+        /*
+        System.out.println(DataSorting.sortLowestPoints(sportsArray));
+        System.out.println(DataSorting.sortLowestOpponentPoints(sportsArray));
+        // Sort by wins or losses
+        System.out.println("Type W or L to sort Raptors Wins and losses");
+        strWinsOrLoss = keyboard.readLine();
+        System.out.println(DataSorting.searchResults(sportsArray, strWinsOrLoss));
+        // Sorting points from raptor and opponents
+        System.out.println(DataSorting.sortHighestPoints(sportsArray));
+        System.out.println(DataSorting.sortHighestOpponentPoints(sportsArray));
         // Opponents
         System.out.println("Type in opponent you want to search");
         strOpponentChoice = keyboard.readLine();
@@ -72,9 +85,9 @@ public class MainMenu {
         // Average points scored for Raptors and Opponents
         System.out.println(DataSorting.averagePoints(sportsArray));
         System.out.println(DataSorting.averagePoints2(sportsArray));
-        
+        */
         // Search specific game number
-        System.out.println("Type a specific game number to print it out");
+        System.out.println("Type a specific game number to print it out from 1-106");
         intGameNumber1 = Integer.parseInt(keyboard.readLine());
         System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
     }
