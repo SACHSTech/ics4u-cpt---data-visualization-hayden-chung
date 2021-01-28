@@ -189,5 +189,24 @@ public class DataSorting {
         }
         return "Game Streaks";
     }
+
+    public static int totalWins(SportsList[] sportsArray, String strResults) {
+        String strTotal;
+        int intCount1 = 0;
+        //String strOpponent2;
+        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
+            strTotal = sportsArray[intCount].getGameResult();
+            if(strTotal.equals(strResults)) {
+                intCount1++;
+                System.out.println(sportsArray[intCount].toString());
+            }
+        }
+        if(strResults.equalsIgnoreCase("W")){
+            System.out.println("The total amount of wins is:");
+        } else if(strResults.equalsIgnoreCase("L")){
+            System.out.println("The total amount of losses is: ");
+        }
+        return intCount1;
+    }
     
 }

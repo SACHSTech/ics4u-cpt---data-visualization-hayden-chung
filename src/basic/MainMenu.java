@@ -49,6 +49,7 @@ public class MainMenu {
             System.out.println("Hi! \nWelcome to the 2018-2019 Toronto Raptors NBA Season!");
             System.out.println("If you want to print out the database, type in the word Database");
             System.out.println("If you want to use the sorting algorithms, type in the word Algorithms");
+            System.out.println("If you want to view some charts, type in the word chart");
             System.out.println("If you want to exit the program, type exit");
             strChoice = keyboard.readLine();
                 for(int intCount = 0 ;intCount < 106; intCount++) {
@@ -92,6 +93,7 @@ public class MainMenu {
                 System.out.println("Type in 11 if you want to see the average amount of points scored by the Raptors");
                 System.out.println("Type in 12 if you want to see the average amount of points scored on the Raptors");
                 System.out.println("Type in 13 if you want to see specific game");
+                System.out.println("Type 14 to see the total amount of losses or wins and print out those games");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
                     System.out.println("Type a game streak for wins or losses and the amount next to it (From: L 1 - L 2 and W 1 - W 8 ");
@@ -137,7 +139,15 @@ public class MainMenu {
                     System.out.println("Type a specific game number to print it out from 1-106");
                     intGameNumber1 = Integer.parseInt(keyboard.readLine());
                     System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
+                } else if (intOption == 14) {
+                    // Total losses or Wins
+                    System.out.println("Type W or L to see the total amount of wins or losses and to view only wins or losses");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.totalWins(sportsArray, strChoice1));
                 }
+            }else if(strChoice.equalsIgnoreCase("Chart")) {
+
+                
             }else if(strChoice.equalsIgnoreCase("exit")){
                 System.out.println("The program will now close");
                 blnLoop = false;
