@@ -1,6 +1,8 @@
 package basic;
 
 
+import static basic.SportsList.csvToObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.stage.Stage;
@@ -26,11 +28,11 @@ public class MainMenu extends Application {
         primaryStage.setHeight(700);
         primaryStage.setWidth(700);
         String fileName = "src/basic/sports.csv";
-        ArrayList<SportsList> SportsList = basic.SportsList.csvToObject(fileName);
-        main(primaryStage, SportsList);
+        ArrayList<SportsList> Sports = basic.SportsList.csvToObject("src/basic/sports.csv");
+        main(primaryStage, Sports);
     }
     
-    public static void main(Stage primaryStage, ArrayList<SportsList> SportsList) {
+    public static void main(Stage primaryStage, ArrayList<SportsList> Sports) {
         GridPane grid = new GridPane();
         grid.setVgap(13);
         grid.setHgap(13);
@@ -45,7 +47,8 @@ public class MainMenu extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                Database.DataBaseScreen(primaryStage, SportsList);
+                Database.DataBaseScreen(primaryStage, Sports);
+                
             }
         });
         

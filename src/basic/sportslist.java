@@ -47,6 +47,10 @@ public class SportsList {
         this.gameStreak = new SimpleStringProperty(gameStreak);
     }
 
+    public StringProperty getGameStreak() {
+        return gameStreak;
+    }
+
     public IntegerProperty gameNumberProperty() {
         return gameNumber;
     }
@@ -154,13 +158,12 @@ public class SportsList {
     public static ArrayList<SportsList> csvToObject(String fileName) throws IOException {
         fileName = "src/basic/sports.csv";
         
-        BufferedReader CSVFile = new BufferedReader(new FileReader(fileName));
-        ArrayList<SportsList> SportsList = new ArrayList<>();
+        BufferedReader CSVFile = new BufferedReader(new FileReader("src/basic/sports.csv"));
+        ArrayList<SportsList> Sports = new ArrayList<>();
         
         String line;
-       
         while ((line = CSVFile.readLine()) != null) {
-
+            
             String[] sportsCsv = CSVFile.readLine().split(",");
             
             SportsList sportsObj = new SportsList(0, "", "", "", "", "", "", "", 0, 0, 0, 0, "");
@@ -179,9 +182,9 @@ public class SportsList {
             sportsObj.setTotalLoses(Integer.parseInt(sportsCsv[11]));
             sportsObj.setGameStreak(sportsCsv[12]);
 
-            SportsList.add(sportsObj);
+            Sports.add(sportsObj);
         }
         CSVFile.close();
-        return SportsList;
+        return Sports;
     }
 }

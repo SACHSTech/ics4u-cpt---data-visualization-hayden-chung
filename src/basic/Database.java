@@ -20,7 +20,7 @@ public class Database  {
 
     public static Parent createContent(ArrayList<SportsList> Sports) {
         final ObservableList<SportsList> data = FXCollections.observableArrayList(Sports);
-        
+        /*
         TableColumn gameNumberColumn = new TableColumn();
         //gameNumberColumn.setMinWidth(500);
         gameNumberColumn.setText("Game Number");
@@ -69,18 +69,19 @@ public class Database  {
         TableColumn totalLosesColumn = new TableColumn();
         totalLosesColumn.setText("Total Loses");
         totalLosesColumn.setCellFactory(new PropertyValueFactory("totalLoses"));
-
+        */
         TableColumn gameStreakColumn = new TableColumn();
         gameStreakColumn.setText("Game Streak");
         gameStreakColumn.setCellFactory(new PropertyValueFactory("gameStreak"));
 
         final TableView tableView = new TableView();
+        //tableView.getColumns().addAll(gameNumberColumn, dateNumberColumn, gameTimeColumn, bestPlayerColumn, gameLocationColumn, gameOpponentColumn, gameResultColumn, gameLengthColumn, raptorScoreColumn, opponentScoreColumn, totalWinsColumn, totalLosesColumn, gameStreakColumn);
+        tableView.getColumns().addAll(gameStreakColumn);
         tableView.setItems(data);
-        tableView.getColumns().addAll(gameNumberColumn, dateNumberColumn, gameTimeColumn, bestPlayerColumn, gameLocationColumn, gameOpponentColumn, gameResultColumn, gameLengthColumn, raptorScoreColumn, opponentScoreColumn, totalWinsColumn, totalLosesColumn, gameStreakColumn);
         return tableView;
     }
     
-    public static void DataBaseScreen (Stage primaryStage, ArrayList<SportsList> SportsList) {
+    public static void DataBaseScreen (Stage primaryStage, ArrayList<SportsList> Sports) {
 
         GridPane grid = new GridPane();
         grid.setVgap(12);
@@ -88,12 +89,12 @@ public class Database  {
         grid.setPadding(new Insets(25, 25, 25, 25));
         grid.setGridLinesVisible(false);
 
-        grid.add(createContent(SportsList), 0, 0);
+        grid.add(createContent(Sports), 0, 0);
 
 
-        //primaryStage.setScene(new Scene(createContent(SportsList)));
+        primaryStage.setScene(new Scene(createContent(Sports)));
         primaryStage.setScene(new Scene(grid));
-        //primaryStage.setWidth(1200);
-        //primaryStage.show();
+        primaryStage.setWidth(1200);
+        primaryStage.show();
     }
 }
