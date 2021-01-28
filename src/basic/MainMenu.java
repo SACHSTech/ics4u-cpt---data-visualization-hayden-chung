@@ -49,6 +49,7 @@ public class MainMenu {
             System.out.println("Hi! \nWelcome to the 2018-2019 Toronto Raptors NBA Season!");
             System.out.println("If you want to print out the database, type in the word Database");
             System.out.println("If you want to use the sorting algorithms, type in the word Algorithms");
+            System.out.println("If you want to exit the program, type exit");
             strChoice = keyboard.readLine();
                 for(int intCount = 0 ;intCount < 106; intCount++) {
                     strLine = SportsData.readLine();
@@ -137,6 +138,9 @@ public class MainMenu {
                     intGameNumber1 = Integer.parseInt(keyboard.readLine());
                     System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
                 }
+            }else if(strChoice.equalsIgnoreCase("exit")){
+                System.out.println("The program will now close");
+                blnLoop = false;
             }
         }
     }
