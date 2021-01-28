@@ -3,6 +3,11 @@ package basic;
 import java.io.*;
 import java.util.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.IntegerProperty;
@@ -147,11 +152,14 @@ public class SportsList {
     }
 
     public static ArrayList<SportsList> csvToObject(String fileName) throws IOException {
+        fileName = "src/basic/sports.csv";
+        
         BufferedReader CSVFile = new BufferedReader(new FileReader(fileName));
         ArrayList<SportsList> SportsList = new ArrayList<>();
-
-        String strLoop;
-        while ((strLoop = CSVFile.readLine()) != null) {
+        
+        String line;
+       
+        while ((line = CSVFile.readLine()) != null) {
 
             String[] sportsCsv = CSVFile.readLine().split(",");
             

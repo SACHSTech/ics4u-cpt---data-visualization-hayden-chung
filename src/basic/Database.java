@@ -13,12 +13,16 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import javafx.geometry.Insets;
+import javafx.scene.layout.GridPane;
+
 public class Database  { 
 
     public static Parent createContent(ArrayList<SportsList> Sports) {
         final ObservableList<SportsList> data = FXCollections.observableArrayList(Sports);
         
         TableColumn gameNumberColumn = new TableColumn();
+        //gameNumberColumn.setMinWidth(500);
         gameNumberColumn.setText("Game Number");
         gameNumberColumn.setCellFactory(new PropertyValueFactory("gameNumber"));
 
@@ -78,7 +82,18 @@ public class Database  {
     
     public static void DataBaseScreen (Stage primaryStage, ArrayList<SportsList> SportsList) {
 
-        primaryStage.setScene(new Scene(createContent(SportsList)));
-        primaryStage.show();
+        GridPane grid = new GridPane();
+        grid.setVgap(12);
+        grid.setHgap(12);
+        grid.setPadding(new Insets(25, 25, 25, 25));
+        grid.setGridLinesVisible(false);
+
+        grid.add(createContent(SportsList), 0, 0);
+
+
+        //primaryStage.setScene(new Scene(createContent(SportsList)));
+        primaryStage.setScene(new Scene(grid));
+        //primaryStage.setWidth(1200);
+        //primaryStage.show();
     }
 }

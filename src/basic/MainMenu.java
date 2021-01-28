@@ -1,5 +1,6 @@
 package basic;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.stage.Stage;
@@ -11,21 +12,34 @@ import javafx.scene.control.Button;
 import javafx.application.Application;
 import javafx.scene.layout.VBox;
 
+import javafx.geometry.Insets;
+import javafx.scene.layout.GridPane;
+
 public class MainMenu extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
     }
 
-    @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setTitle("Toronto Raptors database");
         primaryStage.setHeight(700);
         primaryStage.setWidth(700);
         String fileName = "src/basic/sports.csv";
         ArrayList<SportsList> SportsList = basic.SportsList.csvToObject(fileName);
+        main(primaryStage, SportsList);
+    }
+    
+    public static void main(Stage primaryStage, ArrayList<SportsList> SportsList) {
+        GridPane grid = new GridPane();
+        grid.setVgap(13);
+        grid.setHgap(13);
+        grid.setPadding(new Insets(25, 25, 25, 25));
+        //grid.setGridLinesVisible(false);
+        primaryStage.setWidth(1200);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
+        grid.add(button1, 0, 0);
         button1.setMaxSize(200, 100);
         button1.setOnAction(new EventHandler<ActionEvent>() {
             
@@ -35,10 +49,8 @@ public class MainMenu extends Application {
             }
         });
         
-        
-        VBox VBoxMenu = new VBox(button1);
-        VBoxMenu.setSpacing(15);
-        primaryStage.setScene(new Scene(VBoxMenu));
+        primaryStage.setScene(new Scene(grid));
         primaryStage.show();
+        
     }
 }
