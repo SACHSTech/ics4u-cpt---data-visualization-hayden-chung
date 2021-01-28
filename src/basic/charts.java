@@ -14,9 +14,4 @@ import javafx.stage.Stage;
 
 public class charts {
     
-    public static BarChart chart;
-    private static CategoryAxis xAxis;
-    private static NumberAxis yAxis;
-
-    public static Parent BarChart(String  )
 }
