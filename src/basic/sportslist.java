@@ -79,6 +79,6 @@ public class SportsList {
     }
 
     public String toString() {
-        return this.intGameNumber + " | " + this.strDateNumber + " | " + this.strGameTime + " | " + this.strGameLocation + " | " + this.strGameOpponent + " | " + this.strGameResult + " | " + this.strGameLength + " | " + this.intRaptorScore + " | " + this.intOpponentScore + " | " + this.intTotalWins + " | " + this.intTotalLosses + " | " + this.strGameStreak;
+        return this.intGameNumber + "  |  " + this.strDateNumber + "  |  " + this.strGameTime + "  |  " + this.strGameLocation + "  |  " + this.strGameOpponent + "  |  " + this.strGameResult + "  |  " + this.strGameLength + "  |  " + this.intRaptorScore + "  |  " + this.intOpponentScore + "  |  " + this.intTotalWins + "  |  " + this.intTotalLosses + "  |  " + this.strGameStreak;
     }
 }

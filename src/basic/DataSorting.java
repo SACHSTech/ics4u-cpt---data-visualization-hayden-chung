@@ -170,7 +170,7 @@ public class DataSorting {
     }
 
     public static String searchPlayoff(SportsList[] sportsArray) {
-        for(int intCount = 0; intCount < 106; intCount++) {
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
             if(intCount >= 82){
                 System.out.println(sportsArray[intCount].toString());
             }

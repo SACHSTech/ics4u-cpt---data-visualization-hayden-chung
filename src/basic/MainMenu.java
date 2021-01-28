@@ -55,7 +55,7 @@ public class MainMenu {
             intTotalLosses = Integer.parseInt(sportsCsv[10]);
             strGameStreak = sportsCsv[11];
             
-            sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak);
+            System.out.println(sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak));
             sportsArray[intCount] = sportsList;
         }
 
