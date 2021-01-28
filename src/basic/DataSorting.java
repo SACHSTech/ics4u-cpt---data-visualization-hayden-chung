@@ -51,4 +51,23 @@ public class DataSorting {
         }
         return "End of home games list";
     }
+
+    public static String gameNumber(SportsList[] sportsArray, int intNumber) {
+        int intGameNumber;
+        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
+            intGameNumber = sportsArray[intCount].getGameNumber();
+            if(intGameNumber == intNumber) {
+                System.out.println(sportsArray[intCount].toString());
+            }
+        }
+        if(intNumber <= 106) {
+            return "Game was searched for";
+        } else {
+            return "Game was not found";
+        }
+    }
+
+    public 
+
+    
 }

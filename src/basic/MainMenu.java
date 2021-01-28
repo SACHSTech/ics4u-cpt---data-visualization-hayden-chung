@@ -29,7 +29,8 @@ public class MainMenu {
         SportsList sportsList;
 
         String strOpponentChoice;
-
+        String strLocation;
+        int intGameNumber1;
 
         SportsList[] sportsArray = new SportsList[106];
 
@@ -58,13 +59,24 @@ public class MainMenu {
 
         SportsData.close();
 
+        // Opponents
         System.out.println("Type in opponent you want to search");
         strOpponentChoice = keyboard.readLine();
+        System.out.println(DataSorting.searchOpponent(sportsArray, strOpponentChoice));
         
-        System.out.println(DataSorting.searchHome(sportsArray, "Home"));
+        // Away or Home games
+        System.out.println("Type Away or Home");
+        strLocation = keyboard.readLine();
+        System.out.println(DataSorting.searchHome(sportsArray, strLocation));
+
+        // Average points scored for Raptors and Opponents
         System.out.println(DataSorting.averagePoints(sportsArray));
         System.out.println(DataSorting.averagePoints2(sportsArray));
-        System.out.println(DataSorting.searchOpponent(sportsArray, strOpponentChoice));
+        
+        // Search specific game number
+        System.out.println("Type a specific game number to print it out");
+        intGameNumber1 = Integer.parseInt(keyboard.readLine());
+        System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
     }
 
 }
