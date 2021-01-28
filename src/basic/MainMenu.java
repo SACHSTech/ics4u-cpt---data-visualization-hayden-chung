@@ -28,7 +28,7 @@ public class MainMenu extends Application {
         primaryStage.setHeight(700);
         primaryStage.setWidth(700);
         String fileName = "src/basic/sports.csv";
-        ArrayList<SportsList> Sports = basic.SportsList.csvToObject("src/basic/sports.csv");
+        ArrayList<SportsList> Sports = basic.SportsList.csvToObject(fileName);
         main(primaryStage, Sports);
     }
     
@@ -37,7 +37,7 @@ public class MainMenu extends Application {
         grid.setVgap(13);
         grid.setHgap(13);
         grid.setPadding(new Insets(25, 25, 25, 25));
-        //grid.setGridLinesVisible(false);
+        grid.setGridLinesVisible(false);
         primaryStage.setWidth(1200);
         
         Button button1 =new Button("Raptors 2018-2019 Season");
@@ -48,7 +48,7 @@ public class MainMenu extends Application {
             @Override
             public void handle(ActionEvent event) {
                 Database.DataBaseScreen(primaryStage, Sports);
-                
+
             }
         });
         

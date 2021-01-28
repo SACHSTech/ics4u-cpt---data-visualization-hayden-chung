@@ -164,7 +164,7 @@ public class SportsList {
         String line;
         while ((line = CSVFile.readLine()) != null) {
             
-            String[] sportsCsv = CSVFile.readLine().split(",");
+            String[] sportsCsv = line.split(",");
             
             SportsList sportsObj = new SportsList(0, "", "", "", "", "", "", "", 0, 0, 0, 0, "");
 
