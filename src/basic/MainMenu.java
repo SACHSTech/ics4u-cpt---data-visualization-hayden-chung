@@ -11,7 +11,8 @@ import javafx.stage.Stage;
 public class MainMenu {
 
     public static void main(String[] args) throws IOException {
-
+        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+        
         String strLine = " ";
         int intGameNumber;
         String strDateNumber;
@@ -25,7 +26,7 @@ public class MainMenu {
         int intTotalWins;
         int intTotalLosses;
         String strGameStreak;
-        SportsList
+        SportsList sportsList;
 
         SportsList[] Sports = new SportsList[106];
 
@@ -48,9 +49,13 @@ public class MainMenu {
             intTotalLosses = Integer.parseInt(sportsCsv[10]);
             strGameStreak = sportsCsv[11];
             
-
+            sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak);
+            Sports[intCount] = sportsList;
         }
 
         SportsData.close();
+
+        System.out.println(DataSorting.averagePoints(Sports));
     }
+
 }

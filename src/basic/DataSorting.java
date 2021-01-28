@@ -8,7 +8,7 @@ public class DataSorting {
         for(int intCount = 0; intCount < sportsArray.length; intCount++) {
             dblAverage = dblAverage + sportsArray[intCount].getRaptorScore();
         }
-
+        dblAverage = dblAverage / 106;
         return dblAverage;
 
     }
