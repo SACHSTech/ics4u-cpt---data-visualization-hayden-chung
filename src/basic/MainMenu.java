@@ -33,6 +33,7 @@ public class MainMenu {
         String strLocation;
         int intGameNumber1;
         String strWinsOrLoss;
+        String strGameStreak1;
 
         SportsList[] sportsArray = new SportsList[106];
 
@@ -55,13 +56,17 @@ public class MainMenu {
             intTotalLosses = Integer.parseInt(sportsCsv[10]);
             strGameStreak = sportsCsv[11];
             
-            System.out.println(sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak));
+            sportsList = new SportsList(intGameNumber, strDateNumber, strGameTime, strGameLocation, strGameOpponent, strGameResult, strGameLength, intRaptorScore, intOpponentScore, intTotalWins, intTotalLosses, strGameStreak);
             sportsArray[intCount] = sportsList;
         }
 
         SportsData.close();
+        System.out.println("Type a game streak for wins or losses and the amount next to it (From: L 1 - L 2 and W 1 - W 8 ");
+        strGameStreak = keyboard.readLine();
+        System.out.println(DataSorting.searchWinStreak(sportsArray, strGameStreak));
+        // Print out only playoff or regular season games
         //System.out.println(DataSorting.searchRegular(sportsArray));
-        System.out.println(DataSorting.searchPlayoff(sportsArray));
+        //System.out.println(DataSorting.searchPlayoff(sportsArray));
         /*
         System.out.println(DataSorting.sortLowestPoints(sportsArray));
         System.out.println(DataSorting.sortLowestOpponentPoints(sportsArray));

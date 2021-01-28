@@ -177,5 +177,17 @@ public class DataSorting {
         }
         return "Playoff games only";
     }
+
+    public static String searchWinStreak(SportsList[] sportsArray, String strGame) {
+        String strGameStreak;
+        //String strOpponent2;
+        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
+            strGameStreak = sportsArray[intCount].getGameStreak();
+            if(strGameStreak.equals(strGame)) {
+                System.out.println(sportsArray[intCount].toString());
+            }
+        }
+        return "Game Streaks";
+    }
     
 }
