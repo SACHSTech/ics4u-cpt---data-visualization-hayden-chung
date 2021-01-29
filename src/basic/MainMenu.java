@@ -9,8 +9,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.Arrays;
 
-public class MainMenu {
+public class MainMenu extends Application{
 
+    static int intTotalWins2;
+    static int intTotalLosses2;
     public static void main(String[] args) throws IOException {
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
         
@@ -31,15 +33,17 @@ public class MainMenu {
 
         String strChoice;
         int intOption;
+        int intOption2;
 
         String strOpponentChoice;
         String strLocation;
         int intGameNumber1;
         String strWinsOrLoss;
         String strGameStreak1;
+        int intChartNumber;
 
         boolean blnLoop = true;
-        boolean blnLoop2 = true;
+        
         
 
         SportsList[] sportsArray = new SportsList[106];
@@ -93,7 +97,8 @@ public class MainMenu {
                 System.out.println("Type in 11 if you want to see the average amount of points scored by the Raptors");
                 System.out.println("Type in 12 if you want to see the average amount of points scored on the Raptors");
                 System.out.println("Type in 13 if you want to see specific game");
-                System.out.println("Type 14 to see the total amount of losses or wins and print out those games");
+                System.out.println("Type 14 to see games with only wins or losses");
+                System.out.println("Type 15 to see the total amount of losses or wins");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
                     System.out.println("Type a game streak for wins or losses and the amount next to it (From: L 1 - L 2 and W 1 - W 8 ");
@@ -141,17 +146,39 @@ public class MainMenu {
                     System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
                 } else if (intOption == 14) {
                     // Total losses or Wins
-                    System.out.println("Type W or L to see the total amount of wins or losses and to view only wins or losses");
+                    System.out.println("Type W or L to view only wins or losses");
                     String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.amountOfGames(sportsArray, strChoice1));
+                } else if (intOption == 15) {
+                    // Total losses or Wins
+                    System.out.println("Type W or L to view amount of losses or wins");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println("Total amount of wins or losses");
                     System.out.println(DataSorting.totalWins(sportsArray, strChoice1));
-                }
+                } 
             }else if(strChoice.equalsIgnoreCase("Chart")) {
+                System.out.println("Select a barchart: Type in 1");
+                System.out.println("Select a linegraph: Type in 2");
+                intOption2 = Integer.parseInt(keyboard.readLine());
+                if(intOption2 == 1){
+                    intTotalWins2 = DataSorting.totalWins(sportsArray, "W");
+                    intTotalLosses2 = DataSorting.totalWins(sportsArray, "L");
 
+                    launch(args);
+                    intChartNumber = 1;
+                }
                 
             }else if(strChoice.equalsIgnoreCase("exit")){
                 System.out.println("The program will now close");
                 blnLoop = false;
             }
         }
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2)));
+        primaryStage.show();
+
     }
 }
