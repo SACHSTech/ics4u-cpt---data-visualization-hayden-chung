@@ -398,6 +398,4 @@ public class DataSorting {
         }
         return intCount1;
     }
-
-    
 }

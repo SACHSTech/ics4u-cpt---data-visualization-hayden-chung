@@ -123,12 +123,12 @@ public class MainMenu extends Application {
                 System.out.println("Type in 12 if you want to see the average amount of points scored on the Raptors");
                 System.out.println("Type in 13 if you want to see specific game");
                 System.out.println("Type 14 to see the total amount of losses or wins");
-                System.out.println("Type 15 to see games where raptor scored between 80 and 100 points");
-                System.out.println("Type 16 to see games where raptor scored between 101 and 120 points");
-                System.out.println("Type 17 to see games where raptor scored greater than 120 points");
-                System.out.println("Type 18 to see games where raptor scored between 80 and 100 points in win or loss");
-                System.out.println("Type 19 to see games where raptor scored between 101 and 120 points in win or loss");
-                System.out.println("Type 20 to see games where raptor scored 121 or more in win or loss");
+                System.out.println("Type 15 to see games where Raptor scored between 80 and 100 points");
+                System.out.println("Type 16 to see games where Raptor scored between 101 and 120 points");
+                System.out.println("Type 17 to see games where Raptor scored greater than 120 points");
+                System.out.println("Type 18 to see games where Raptor scored between 80 and 100 points in win or loss");
+                System.out.println("Type 19 to see games where Raptor scored between 101 and 120 points in win or loss");
+                System.out.println("Type 20 to see games where Raptor scored 121 or more in win or loss");
                 System.out.println("Type 21 to see how many games ended between regulation and OT");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
@@ -160,10 +160,10 @@ public class MainMenu extends Application {
                     System.out.println(DataSorting.sortLowestOpponentPoints(sportsArray));
                 } else if (intOption == 6) {
                     // Print out wins or losses
-                    System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
-                    System.out.println(" ");
                     System.out.println("Type W or L to sort Raptors Wins and losses");
                     strWinsOrLoss = keyboard.readLine();
+                    System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
+                    System.out.println(" ");
                     System.out.println(DataSorting.searchResults(sportsArray, strWinsOrLoss));
                 } else if (intOption == 7) {
                     // Sorting points from Highest to Lowest
