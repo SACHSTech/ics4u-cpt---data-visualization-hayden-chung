@@ -110,8 +110,8 @@ public class MainMenu extends Application {
             if (strChoice.equalsIgnoreCase("Algorithms")) {
                 System.out.println("Type out which algorithm you would like to use");
                 System.out.println("Type in 1 if you want to search a certain game streak");
-                System.out.println("Type in 2 if you want to search playoff games only");
-                System.out.println("Type in 3 if you want to search regular season games only");
+                System.out.println("Type in 2 if you want to search regular season games only");
+                System.out.println("Type in 3 if you want to search playoff games only");
                 System.out.println("Type in 4 if you want to sort the Raptors score by lowest amount");
                 System.out.println("Type in 5 if you want to sort the opponents score by lowest amount");
                 System.out.println("Type in 6 if you want to sort the games by wins or losses");
@@ -234,7 +234,7 @@ public class MainMenu extends Application {
                     System.out.println(DataSorting.sortingPoints5(sportsArray, strChoice1));
                 } else if (intOption == 21) {
                     //Printing amount of games ended between regulation, OT or 2OT
-                    System.out.println("Type regulation, OT or 2OT to get total amount of games finished in that time");
+                    System.out.println("Type Regulation, OT or 2OT to get total amount of games finished in that time");
                     String strChoice1 = keyboard.readLine();
                     System.out.println(DataSorting.timeFind(sportsArray, strChoice1));
                 }else {
