@@ -1,0 +1,106 @@
+1,Wed Oct 17 2018,7:30p,Home,Cleveland Cavaliers,W,Regulation,116,104,1,0,W 1
+2,Fri Oct 19 2018,8:00p,Home,Boston Celtics,W,Regulation,113,101,2,0,W 2
+3,Sat Oct 20 2018,7:00p,Away,Washington Wizards,W,Regulation,117,113,3,0,W 3
+4,Mon Oct 22 2018,7:30p,Home,Charlotte Hornets,W,Regulation,127,106,4,0,W 4
+5,Wed Oct 24 2018,7:30p,Home,Minnesota Timberwolves,W,Regulation,112,105,5,0,W 5
+6,Fri Oct 26 2018,7:30p,Home,Dallas Mavericks,W,Regulation,116,107,6,0,W 6
+7,Mon Oct 29 2018,8:00p,Away,Milwaukee Bucks,L,Regulation,109,124,6,1,L 1
+8,Tue Oct 30 2018,7:30p,Home,Philadelphia 76ers,W,Regulation,129,112,7,1,W 1
+9,Fri Nov 2 2018,10:00p,Away,Phoenix Suns,W,Regulation,107,98,8,1,W 2
+10,Sun Nov 4 2018,9:30p,Away,Los Angeles Lakers,W,Regulation,121,107,9,1,W 3
+11,Mon Nov 5 2018,9:00p,Away,Utah Jazz,W,Regulation,124,111,10,1,W 4
+12,Wed Nov 7 2018,10:00p,Away,Sacramento Kings,W,Regulation,114,105,11,1,W 5
+13,Sat Nov 10 2018,3:00p,Home,New York Knicks,W,Regulation,128,112,12,1,W 6
+14,Mon Nov 12 2018,7:30p,Home,New Orleans Pelicans,L,Regulation,110,126,12,2,L 1
+15,Wed Nov 14 2018,7:30p,Home,Detroit Pistons,L,Regulation,104,106,12,3,L 2
+16,Fri Nov 16 2018,7:00p,Away,Boston Celtics,L,OT,116,123,12,4,L 3
+17,Sat Nov 17 2018,8:00p,Away,Chicago Bulls,W,Regulation,122,83,13,4,W 1
+18,Tue Nov 20 2018,7:00p,Away,Orlando Magic,W,Regulation,93,91,14,4,W 2
+19,Wed Nov 21 2018,7:30p,Away,Atlanta Hawks,W,Regulation,124,108,15,4,W 3
+20,Fri Nov 23 2018,7:30p,Home,Washington Wizards,W,Regulation,125,107,16,4,W 4
+21,Sun Nov 25 2018,6:00p,Home,Miami Heat,W,Regulation,125,115,17,4,W 5
+22,Tue Nov 27 2018,8:00p,Away,Memphis Grizzlies,W,Regulation,122,114,18,4,W 6
+23,Thu Nov 29 2018,8:00p,Home,Golden State Warriors,W,OT,131,128,19,4,W 7
+24,Sat Dec 1 2018,8:00p,Away,Cleveland Cavaliers,W,Regulation,106,95,20,4,W 8
+25,Mon Dec 3 2018,7:30p,Home,Denver Nuggets,L,Regulation,103,106,20,5,L 1
+26,Wed Dec 5 2018,8:00p,Home,Philadelphia 76ers,W,Regulation,113,102,21,5,W 1
+27,Fri Dec 7 2018,7:30p,Away,Brooklyn Nets,L,OT,105,106,21,6,L 1
+28,Sun Dec 9 2018,6:00p,Home,Milwaukee Bucks,L,Regulation,99,104,21,7,L 2
+29,Tue Dec 11 2018,10:30p,Away,Los Angeles Clippers,W,Regulation,123,99,22,7,W 1
+30,Wed Dec 12 2018,10:30p,Away,Golden State Warriors,W,Regulation,113,93,23,7,W 2
+31,Fri Dec 14 2018,10:00p,Away,Portland Trail Blazers,L,Regulation,122,128,23,8,L 1
+32,Sun Dec 16 2018,8:00p,Away,Denver Nuggets,L,Regulation,86,95,23,9,L 2
+33,Wed Dec 19 2018,7:30p,Home,Indiana Pacers,W,Regulation,99,96,24,9,W 1
+34,Fri Dec 21 2018,7:00p,Home,Cleveland Cavaliers,W,Regulation,126,110,25,9,W 2
+35,Sat Dec 22 2018,7:30p,Away,Philadelphia 76ers,L,Regulation,101,126,25,10,L 1
+36,Wed Dec 26 2018,7:30p,Away,Miami Heat,W,Regulation,106,104,26,10,W 1
+37,Fri Dec 28 2018,7:00p,Away,Orlando Magic,L,Regulation,87,116,26,11,L 1
+38,Sun Dec 30 2018,6:00p,Home,Chicago Bulls,W,Regulation,95,89,27,11,W 1
+39,Tue Jan 1 2019,7:30p,Home,Utah Jazz,W,Regulation,122,116,28,11,W 2
+40,Thu Jan 3 2019,8:00p,Away,San Antonio Spurs,L,Regulation,107,125,28,12,L 1
+41,Sat Jan 5 2019,8:30p,Away,Milwaukee Bucks,W,Regulation,123,116,29,12,W 1
+42,Sun Jan 6 2019,7:30p,Home,Indiana Pacers,W,Regulation,121,105,30,12,W 2
+43,Tue Jan 8 2019,7:30p,Home,Atlanta Hawks,W,Regulation,104,101,31,12,W 3
+44,Fri Jan 11 2019,7:30p,Home,Brooklyn Nets,W,Regulation,122,105,32,12,W 4
+45,Sun Jan 13 2019,1:00p,Away,Washington Wizards,W,2OT,140,138,33,12,W 5
+46,Wed Jan 16 2019,8:00p,Away,Boston Celtics,L,Regulation,108,117,33,13,L 1
+47,Thu Jan 17 2019,7:30p,Home,Phoenix Suns,W,Regulation,111,109,34,13,W 1
+48,Sat Jan 19 2019,7:30p,Home,Memphis Grizzlies,W,Regulation,119,90,35,13,W 2
+49,Tue Jan 22 2019,7:00p,Home,Sacramento Kings,W,Regulation,120,105,36,13,W 3
+50,Wed Jan 23 2019,7:00p,Away,Indiana Pacers,L,Regulation,106,110,36,14,L 1
+51,Fri Jan 25 2019,8:00p,Away,Houston Rockets,L,Regulation,119,121,36,15,L 2
+52,Sun Jan 27 2019,7:00p,Away,Dallas Mavericks,W,Regulation,123,120,37,15,W 1
+53,Thu Jan 31 2019,8:00p,Home,Milwaukee Bucks,L,Regulation,92,105,37,16,L 1
+54,Sun Feb 3 2019,3:00p,Home,Los Angeles Clippers,W,Regulation,121,103,38,16,W 1
+55,Tue Feb 5 2019,8:00p,Away,Philadelphia 76ers,W,Regulation,119,107,39,16,W 2
+56,Thu Feb 7 2019,7:30p,Away,Atlanta Hawks,W,Regulation,119,101,40,16,W 3
+57,Sat Feb 9 2019,7:30p,Away,New York Knicks,W,Regulation,104,99,41,16,W 4
+58,Mon Feb 11 2019,7:30p,Home,Brooklyn Nets,W,Regulation,127,125,42,16,W 5
+59,Wed Feb 13 2019,7:30p,Home,Washington Wizards,W,Regulation,129,120,43,16,W 6
+60,Fri Feb 22 2019,7:00p,Home,San Antonio Spurs,W,Regulation,120,117,44,16,W 7
+61,Sun Feb 24 2019,3:30p,Home,Orlando Magic,L,Regulation,98,113,44,17,L 1
+62,Tue Feb 26 2019,8:00p,Home,Boston Celtics,W,Regulation,118,95,45,17,W 1
+63,Fri Mar 1 2019,8:00p,Home,Portland Trail Blazers,W,Regulation,119,117,46,17,W 2
+64,Sun Mar 3 2019,6:00p,Away,Detroit Pistons,L,OT,107,112,46,18,L 1
+65,Tue Mar 5 2019,8:00p,Home,Houston Rockets,L,Regulation,95,107,46,19,L 2
+66,Fri Mar 8 2019,8:00p,Away,New Orleans Pelicans,W,Regulation,127,104,47,19,W 1
+67,Sun Mar 10 2019,3:30p,Away,Miami Heat,W,Regulation,125,104,48,19,W 2
+68,Mon Mar 11 2019,7:00p,Away,Cleveland Cavaliers,L,Regulation,101,126,48,20,L 1
+69,Thu Mar 14 2019,8:00p,Home,Los Angeles Lakers,W,Regulation,111,98,49,20,W 1
+70,Sun Mar 17 2019,4:00p,Away,Detroit Pistons,L,Regulation,107,110,49,21,L 1
+71,Mon Mar 18 2019,7:30p,Home,New York Knicks,W,Regulation,128,92,50,21,W 1
+72,Wed Mar 20 2019,9:30p,Away,Oklahoma City Thunder,W,OT,123,114,51,21,W 2
+73,Fri Mar 22 2019,7:30p,Home,Oklahoma City Thunder,L,Regulation,109,116,51,22,L 1
+74,Sun Mar 24 2019,6:00p,Home,Charlotte Hornets,L,Regulation,114,115,51,23,L 2
+75,Tue Mar 26 2019,7:30p,Home,Chicago Bulls,W,Regulation,112,103,52,23,W 1
+76,Thu Mar 28 2019,7:30p,Away,New York Knicks,W,Regulation,117,92,53,23,W 2
+77,Sat Mar 30 2019,8:00p,Away,Chicago Bulls,W,Regulation,124,101,54,23,W 3
+78,Mon Apr 1 2019,7:30p,Home,Orlando Magic,W,Regulation,121,109,55,23,W 4
+79,Wed Apr 3 2019,7:30p,Away,Brooklyn Nets,W,Regulation,115,105,56,23,W 5
+80,Fri Apr 5 2019,7:00p,Away,Charlotte Hornets,L,Regulation,111,113,56,24,L 1
+81,Sun Apr 7 2019,12:00p,Home,Miami Heat,W,OT,117,109,57,24,W 1
+82,Tue Apr 9 2019,8:00p,Away,Minnesota Timberwolves,W,Regulation,120,100,58,24,W 2 
+83,Sat Apr 13 2019,5:00p,Home,Orlando Magic,L,Regulation,101,104,0,1,L 1
+84,Tue Apr 16 2019,8:00p,Home,Orlando Magic,W,Regulation,111,82,1,1,W 1
+85,Fri Apr 19 2019,7:00p,Away,Orlando Magic,W,Regulation,98,93,2,1,W 2
+86,Sun Apr 21 2019,7:00p,Away,Orlando Magic,W,Regulation,107,85,3,1,W 3
+87,Tue Apr 23 2019,7:00p,Home,Orlando Magic,W,Regulation,115,96,4,1,W 4
+88,Sat Apr 27 2019,7:30p,Home,Philadelphia 76ers,W,Regulation,108,95,5,1,W 5
+89,Mon Apr 29 2019,8:00p,Home,Philadelphia 76ers,L,Regulation,89,94,5,2,L 1
+90,Thu May 2 2019,8:00p,Away,Philadelphia 76ers,L,Regulation,95,116,5,3,L 2
+91,Sun May 5 2019,3:30p,Away,Philadelphia 76ers,W,Regulation,101,96,6,3,W 1
+92,Tue May 7 2019,8:00p,Home,Philadelphia 76ers,W,Regulation,125,89,7,3,W 2
+93,Thu May 9 2019,8:00p,Away,Philadelphia 76ers,L,Regulation,101,112,7,4,L 1
+94,Sun May 12 2019,7:00p,Home,Philadelphia 76ers,W,Regulation,92,90,8,4,W 1
+95,Wed May 15 2019,8:30p,Away,Milwaukee Bucks,L,Regulation,100,108,8,5,L 1
+96,Fri May 17 2019,8:30p,Away,Milwaukee Bucks,L,Regulation,103,125,8,6,L 2
+97,Sun May 19 2019,7:00p,Home,Milwaukee Bucks,W,2OT,118,112,9,6,W 1
+98,Tue May 21 2019,8:30p,Home,Milwaukee Bucks,W,Regulation,120,102,10,6,W 2
+99,Thu May 23 2019,8:30p,Away,Milwaukee Bucks,W,Regulation,105,99,11,6,W 3
+100,Sat May 25 2019,8:30p,Home,Milwaukee Bucks,W,Regulation,100,94,12,6,W 4
+101,Thu May 30 2019,9:00p,Home,Golden State Warriors,W,Regulation,118,109,13,6,W 5
+102,Sun Jun 2 2019,8:00p,Home,Golden State Warriors,L,Regulation,104,109,13,7,L 1
+103,Wed Jun 5 2019,9:00p,Away,Golden State Warriors,W,Regulation,123,109,14,7,W 1
+104,Fri Jun 7 2019,9:00p,Away,Golden State Warriors,W,Regulation,105,92,15,7,W 2
+105,Mon Jun 10 2019,9:00p,Home,Golden State Warriors,L,Regulation,105,106,15,8,L 1
+106,Thu Jun 13 2019,9:00p,Away,Golden State Warriors,W,Regulation,114,110,16,8,W 1
