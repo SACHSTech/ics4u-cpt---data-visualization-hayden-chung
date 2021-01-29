@@ -324,7 +324,12 @@ public class DataSorting {
         }
         return intCount1;
     }
-
+    /** 
+     * Returning total number of points scored in range for win or loss
+     * @param sportsArray - sports list array
+     * @param strGameResult - W or L
+     * @return total number of games between 80 - 100
+     */
     public static int sortingPoints3(SportsList[] sportsArray, String strGameResult) {
         double dblAverage = 0;
         int intCount1 = 0;
@@ -338,7 +343,12 @@ public class DataSorting {
         }
         return intCount1;
     }
-
+    /** 
+     * Returning total number of points scored in range for win or loss
+     * @param sportsArray - sports list array
+     * @param strGameResult - W or L
+     * @return total number of games between 101 - 120
+     */
     public static int sortingPoints4(SportsList[] sportsArray, String strGameResult) {
         double dblAverage = 0;
         int intCount1 = 0;
@@ -352,7 +362,12 @@ public class DataSorting {
         }
         return intCount1;
     }
-
+    /** 
+     * Returning total number of points scored in range for win or loss
+     * @param sportsArray - sports list array
+     * @param strGameResult - W or L
+     * @return total number of games for 121+
+     */
     public static int sortingPoints5(SportsList[] sportsArray, String strGameResult) {
         double dblAverage = 0;
         int intCount1 = 0;
