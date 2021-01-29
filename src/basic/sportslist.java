@@ -32,7 +32,7 @@ public class SportsList {
      * @param totalLosses - total number of losses
      * @param gameStreak - streaks of wins or losses
      */
-    public SportsList(int gameNumber, String dateNumber, String gameTime, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLosses, String gameStreak) {
+    public SportsList (int gameNumber, String dateNumber, String gameTime, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLosses, String gameStreak) {
         this.intGameNumber = gameNumber;
         this.strDateNumber = dateNumber;
         this.strGameTime = gameTime;

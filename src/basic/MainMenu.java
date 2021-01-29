@@ -153,7 +153,7 @@ public class MainMenu extends Application {
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.sortLowestPoints(sportsArray));
-                } else if (intOption == 5){
+                } else if (intOption == 5) {
                     // Sort by Lowest Opponent Points to Highest Points
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
@@ -271,7 +271,7 @@ public class MainMenu extends Application {
                     blnLoop = false;
                 }
             // Exit Program
-            }else if(strChoice.equalsIgnoreCase("exit")){
+            }else if(strChoice.equalsIgnoreCase("exit")) {
                 System.out.println("The program will now close");
                 blnLoop = false;
             }
@@ -279,7 +279,7 @@ public class MainMenu extends Application {
     }
 
     //@Override
-    // Showing either barchar or linechart
+    // Showing either barchart or linechart
     public void start(Stage primaryStage) throws Exception {
         if(intOption3 == 1){
             primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2, intTime1, intTime2, intTime3)));
