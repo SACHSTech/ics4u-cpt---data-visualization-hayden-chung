@@ -15,6 +15,9 @@ public class MainMenu extends Application {
     static int intOption3 = 1;
     static int intTotalWins2;
     static int intTotalLosses2;
+    static int intTime1;
+    static int intTime2;
+    static int intTime3;
     static int intTotal1;
     static int intTotal2;
     static int intTotal3;
@@ -126,6 +129,7 @@ public class MainMenu extends Application {
                 System.out.println("Type 18 to see games where raptor scored between 80 and 100 points in win or loss");
                 System.out.println("Type 19 to see games where raptor scored between 101 and 120 points in win or loss");
                 System.out.println("Type 20 to see games where raptor scored 121 or more in win or loss");
+                System.out.println("Type 21 to see how many games ended between regulation and OT");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
                     // Print out games with a certain win or loss streak
@@ -228,6 +232,11 @@ public class MainMenu extends Application {
                     System.out.println("Type W or L to choose games between 120 points");
                     String strChoice1 = keyboard.readLine();
                     System.out.println(DataSorting.sortingPoints5(sportsArray, strChoice1));
+                } else if (intOption == 21) {
+                    //Printing amount of games ended between regulation, OT or 2OT
+                    System.out.println("Type regulation, OT or 2OT to get total amount of games finished in that time");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.timeFind(sportsArray, strChoice1));
                 }else {
                     System.out.println("Not an option");
                 }
@@ -240,6 +249,9 @@ public class MainMenu extends Application {
                 if(intOption2 == 1) {
                     intTotalWins2 = DataSorting.totalWins(sportsArray, "W");
                     intTotalLosses2 = DataSorting.totalWins(sportsArray, "L");
+                    intTime1 = DataSorting.timeFind(sportsArray, "Regulation");
+                    intTime2 = DataSorting.timeFind(sportsArray, "OT");
+                    intTime3 = DataSorting.timeFind(sportsArray, "2OT");
                     intOption3 = 1;
                     launch(args);
                     blnLoop = false;
@@ -270,7 +282,7 @@ public class MainMenu extends Application {
     // Showing either barchar or linechart
     public void start(Stage primaryStage) throws Exception {
         if(intOption3 == 1){
-            primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2)));
+            primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2, intTime1, intTime2, intTime3)));
         } else if(intOption3 == 2) {
             primaryStage.setScene(new Scene(charts.lineChart(intTotal1, intTotal2, intTotal3, intTotal4, intTotal5, intTotal6, intTotal7, intTotal8, intTotal9)));
         }

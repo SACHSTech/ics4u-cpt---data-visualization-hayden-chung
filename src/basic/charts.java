@@ -21,23 +21,26 @@ public class charts {
     public static NumberAxis yAxis;
 
     // Creating barchart
-    public static Parent barChart(int intTotalWins2, int intTotalLosses2) {
+    public static Parent barChart(int intTotalWins2, int intTotalLosses2, int intTime1, int intTime2, int intTime3) {
 
         // Labels and axis
-        String[] result = {"Wins", "Losses"};
+        String[] result = {"Wins", "Losses", "Regulation", "OT", "Double OT"};
         xAxis = new CategoryAxis();
         xAxis.setCategories(FXCollections.<String>observableArrayList(result));
-        yAxis = new NumberAxis("Total Amount of Games", 0.0, 80.0, 10.0);
+        yAxis = new NumberAxis("Total Amount of Games", 0.0, 100.0, 10.0);
 
         // Adding data and creating barchart
         ObservableList<BarChart.Series> barChartData =
         FXCollections.observableArrayList(
             new BarChart.Series("Wins",  FXCollections.observableArrayList(new BarChart.Data(result[0], intTotalWins2))),
-            new BarChart.Series("Losses",  FXCollections.observableArrayList(new BarChart.Data(result[1], intTotalLosses2))));
+            new BarChart.Series("Losses",  FXCollections.observableArrayList(new BarChart.Data(result[1], intTotalLosses2))),
+            new BarChart.Series("Regulation",  FXCollections.observableArrayList(new BarChart.Data(result[2], intTime1))),
+            new BarChart.Series("OT",  FXCollections.observableArrayList(new BarChart.Data(result[3], intTime2))),
+            new BarChart.Series("Double OT",  FXCollections.observableArrayList(new BarChart.Data(result[4], intTime3))));
         chart = new BarChart(xAxis, yAxis, barChartData, 0);
         chart.setBarGap(-20);
-        chart.setCategoryGap(150);
-        chart.setTitle("Total Wins vs Total Losses");
+        chart.setCategoryGap(50);
+        chart.setTitle("Total amount of wins, losses and when games finished");
         return chart;
 
     }
@@ -52,7 +55,7 @@ public class charts {
     public static Parent lineChart(int intTotal1, int intTotal2, int intTotal3, int intTotal4, int intTotal5, int intTotal6, int intTotal7, int intTotal8, int intTotal9) {
         // Create title and axis
         xAxis1 = new CategoryAxis();
-        yAxis1 = new NumberAxis("Total Number of games", 0.0, 60.0, 5.0);
+        yAxis1 = new NumberAxis("Total Number of games", 0.0, 100.0, 5.0);
         chart1 = new LineChart<>(xAxis1, yAxis1);
         chart1.setTitle("Line Chart of the amount of times Raptors Score");
         xAxis1.setLabel("Range of points scored");

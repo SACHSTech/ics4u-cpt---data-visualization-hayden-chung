@@ -381,4 +381,18 @@ public class DataSorting {
         }
         return intCount1;
     }
+
+    public static int timeFind(SportsList[] sportsArray, String strTime) {
+        int intCount1 = 0;
+        String strResult;
+        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
+            strResult = sportsArray[intCount].getGameLength();
+            if(strResult.equals(strTime)) {
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
+
+    
 }
