@@ -17,3 +17,15 @@ The data I used is for this is the 2018 - 2019 Raptors season. It gives informat
 ### Link to data set
 
 Click here for dataset: [Click here](https://www.basketball-reference.com/teams/TOR/2019.html)
+
+### Why I selected this data set
+
+The reason why I selected this data set is because the Toronto Raptors are my favourite team in the league and I wanted to choose their champion season to represent the data for my project. I have always liked the NBA since I was young and have been following statistics about it for a long time. I enjoyed analyzing the data for this Raptor season and I hope you enjoy my program on it.
+
+### Course Connection Vidoe
+
+Click for course connection video: [Click Here](https://youtu.be/KqNksHsJ5Ks)
+
+### Demo Video
+
+Click for demo video: [Click Here](https://youtu.be/pc3A_yDurxs)
