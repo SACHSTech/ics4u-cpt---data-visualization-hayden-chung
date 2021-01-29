@@ -46,55 +46,106 @@ public class SportsList {
         this.intTotalLosses = totalLosses;
         this.strGameStreak = gameStreak;
     }
-    /
+    /** 
+     * Getter method for game number
+     * @return game number
+     */
     public int getGameNumber() {
         return intGameNumber;
     }
 
+    /** 
+     * Getter method for date number
+     * @return date number
+     */
     public String getDateNumber() {
         return strDateNumber;
     }
 
+    /** 
+     * Getter method for game time
+     * @return game time
+     */
     public String getGameTime() {
         return strGameTime;
     }
 
+    /** 
+     * Getter method for game location
+     * @return game location
+     */
     public String getGameLocation() {
         return strGameLocation;
     }
 
+    /** 
+     * Getter method for game opponent
+     * @return game opponent
+     */
     public String getGameOpponent() {
         return strGameOpponent;
     }
 
+    /** 
+     * Getter method for game result
+     * @return game result
+     */
     public String getGameResult() {
         return strGameResult;
     }
 
+    /** 
+     * Getter method for game length
+     * @return game length
+     */
     public String getGameLength() {
         return strGameLength;
     }
 
+    /** 
+     * Getter method for raptor score
+     * @return raptor score
+     */
     public int getRaptorScore() {
         return intRaptorScore;
     }
 
+    /** 
+     * Getter method for opponent score
+     * @return opponent score
+     */
     public int getOpponentScore() {
         return intOpponentScore;
     }
 
+    /** 
+     * Getter method for total wins
+     * @return total wins
+     */
     public int getTotalWins() {
         return intTotalWins;
     }
 
+    /** 
+     * Getter method for total wins
+     * @return total wins
+     */
     public int getTotalLosses() {
         return intTotalLosses;
     }
-
+    
+    /** 
+     * Getter method for game streak
+     * @return game streak
+     */
     public String getGameStreak() {
         return strGameStreak;
     }
 
+    /** 
+     * String for a game
+     * @return all properties of game
+     */
     public String toString() {
         return this.intGameNumber + "  |  " + this.strDateNumber + "  |  " + this.strGameTime + "  |  " + this.strGameLocation + "  |  " + this.strGameOpponent + "  |  " + this.strGameResult + "  |  " + this.strGameLength + "  |  " + this.intRaptorScore + "  |  " + this.intOpponentScore + "  |  " + this.intTotalWins + "  |  " + this.intTotalLosses + "  |  " + this.strGameStreak;
     }
