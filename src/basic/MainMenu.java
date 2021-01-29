@@ -113,11 +113,10 @@ public class MainMenu extends Application {
                 System.out.println("Type in 11 if you want to see the average amount of points scored by the Raptors");
                 System.out.println("Type in 12 if you want to see the average amount of points scored on the Raptors");
                 System.out.println("Type in 13 if you want to see specific game");
-                System.out.println("Type 14 to see games with only wins or losses");
-                System.out.println("Type 15 to see the total amount of losses or wins");
-                System.out.println("Type 16 to see games where raptor scored between 80 and 100 points");
-                System.out.println("Type 17 to see games where raptor scored between 101 and 120 points");
-                System.out.println("Type 18 to see games where raptor scored greater than 120 points");
+                System.out.println("Type 14 to see the total amount of losses or wins");
+                System.out.println("Type 15 to see games where raptor scored between 80 and 100 points");
+                System.out.println("Type 16 to see games where raptor scored between 101 and 120 points");
+                System.out.println("Type 17 to see games where raptor scored greater than 120 points");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
                     // Print out games with a certain win or loss streak
@@ -191,25 +190,18 @@ public class MainMenu extends Application {
                     System.out.println(" ");
                     System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
                 } else if (intOption == 14) {
-                    // View only wins or losses
-                    System.out.println("Type W or L to view only wins or losses");
-                    String strChoice1 = keyboard.readLine();
-                    System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
-                    System.out.println(" ");
-                    System.out.println(DataSorting.amountOfGames(sportsArray, strChoice1));
-                } else if (intOption == 15) {
                     // Total losses or Wins
                     System.out.println("Type W or L to view amount of losses or wins");
                     String strChoice1 = keyboard.readLine();
                     System.out.println("Total amount of wins or losses");
                     System.out.println(DataSorting.totalWins(sportsArray, strChoice1));
-                } else if(intOption == 16) {
+                } else if(intOption == 15) {
                     // Printing out total amount of games scored between 80-100
                     System.out.println(DataSorting.sortingPoints(sportsArray));
-                } else if(intOption == 17) {
+                } else if(intOption == 16) {
                     // Printing out total amount of games scored between 101-120
                     System.out.println(DataSorting.sortingPoints1(sportsArray));
-                } else if(intOption == 18) {
+                } else if(intOption == 17) {
                     // Printing out total amount of games scored between 121+
                     System.out.println(DataSorting.sortingPoints2(sportsArray));
                 } else {

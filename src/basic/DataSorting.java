@@ -234,7 +234,12 @@ public class DataSorting {
         }
         return "Playoff games only";
     }
-    
+    /** 
+     * Print out certain win streaks
+     * @param sportsArray - sports list array
+     * @param strGame - winstreaks or lose streaks
+     * @return winstreaks or lose streaks
+     */
     public static String searchWinStreak(SportsList[] sportsArray, String strGame) {
         String strGameStreak;
         //String strOpponent2;
@@ -246,19 +251,12 @@ public class DataSorting {
         }
         return "Game Streaks";
     }
-
-    public static String amountOfGames(SportsList[] sportsArray, String strResults) {
-        String strTotal;
-        //String strOpponent2;
-        for (int intCount = 0; intCount < sportsArray.length; intCount++) {
-            strTotal = sportsArray[intCount].getGameResult();
-            if(strTotal.equals(strResults)) {
-                System.out.println(sportsArray[intCount].toString());
-            }
-        }
-        return "End of file";
-    }
-
+    /** 
+     * Print out total amount of wins or losses
+     * @param sportsArray - sports list array
+     * @param strResults - W or L
+     * @return total amount of wins or losses
+     */
     public static int totalWins(SportsList[] sportsArray, String strResults) {
         String strTotal;
         int intCount1 = 0;
@@ -273,6 +271,11 @@ public class DataSorting {
         return intCount1;
     }
 
+    /** 
+     * Returning total number of points scored in range
+     * @param sportsArray - sports list array
+     * @return total number of games between 80-100
+     */
     public static int sortingPoints(SportsList[] sportsArray) {
         double dblAverage = 0;
         int intCount1 = 0;
@@ -286,6 +289,11 @@ public class DataSorting {
         return intCount1;
     }
 
+    /** 
+     * Returning total number of points scored in range
+     * @param sportsArray - sports list array
+     * @return total number of games between 101-120
+     */
     public static int sortingPoints1(SportsList[] sportsArray) {
         double dblAverage = 0;
         int intCount1 = 0;
@@ -299,6 +307,11 @@ public class DataSorting {
         return intCount1;
     }
 
+    /** 
+     * Returning total number of points scored in range
+     * @param sportsArray - sports list array
+     * @return total number of games between 120+
+     */
     public static int sortingPoints2(SportsList[] sportsArray) {
         double dblAverage = 0;
         int intCount1 = 0;

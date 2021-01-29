@@ -15,17 +15,21 @@ import javafx.stage.Stage;
 
 public class charts {
     
+    // Variables for chart
     public static BarChart chart;
     public static CategoryAxis xAxis;
     public static NumberAxis yAxis;
 
+    // Creating barchart
     public static Parent barChart(int intTotalWins2, int intTotalLosses2) {
 
+        // Labels and axis
         String[] result = {"Wins", "Losses"};
         xAxis = new CategoryAxis();
         xAxis.setCategories(FXCollections.<String>observableArrayList(result));
         yAxis = new NumberAxis("Total Amount of Games", 0.0, 80.0, 10.0);
 
+        // Adding data and creating barchart
         ObservableList<BarChart.Series> barChartData =
         FXCollections.observableArrayList(
             new BarChart.Series("Wins",  FXCollections.observableArrayList(new BarChart.Data(result[0], intTotalWins2))),
@@ -38,6 +42,7 @@ public class charts {
 
     }
 
+    // Variables for linechart
     private static final String[] gamePoints = {" 80 - 100", "101 - 120", "120+"};
     private static LineChart<String, Number> chart1;
     private static CategoryAxis xAxis1;
@@ -45,12 +50,15 @@ public class charts {
 
 
     public static Parent lineChart(int intTotal1, int intTotal2, int intTotal3) {
+        // Create title and axis
         xAxis1 = new CategoryAxis();
         yAxis1 = new NumberAxis("Total Number of games", 0.0, 60.0, 5.0);
         chart1 = new LineChart<>(xAxis1, yAxis1);
         chart1.setTitle("Line Chart of the amount of times Raptors Score");
         xAxis1.setLabel("Range of points scored");
         yAxis1.setLabel("Total Number of games");
+
+        // Data and posting Chart
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Number of games scored within that Range");
         series.getData().add(new XYChart.Data<String, Number>(gamePoints[0], intTotal1));
