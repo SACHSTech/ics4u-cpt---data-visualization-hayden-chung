@@ -16,7 +16,7 @@ The data I used is for this is the 2018 - 2019 Raptors season. It gives informat
 
 ### Link to data set
 
-Click here for dataset: [Click here](https://www.basketball-reference.com/teams/TOR/2019.html)
+Click here for dataset: [Click here](https://www.basketball-reference.com/teams/TOR/2019_games.html)
 
 ### Why I selected this data set
 
