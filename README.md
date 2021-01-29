@@ -20,7 +20,7 @@ Click here for dataset: [Click here](https://www.basketball-reference.com/teams/
 
 ### Why I selected this data set
 
-The reason why I selected this data set is because the Toronto Raptors are my favourite team in the league and I wanted to choose their champion season to represent the data for my project. I have always liked the NBA since I was young and have been following statistics about it for a long time. I enjoyed analyzing the data for this Raptor season and I hope you enjoy my program on it.
+The reason why I selected this data set is because the Toronto Raptors are my favourite team in the league and I wanted to choose their champion season to represent the data for my project. I have always liked the NBA since I was young and have been following statistics about it for a long time. I enjoyed watching games and being able to dive into the statistics made me have a better appreciation for the game as I realized now that statistics often don't tell the whole story about the game. I enjoyed analyzing the data for this Raptor season and I hope you enjoy my program on it.
 
 ### Course Connection Vidoe
 
