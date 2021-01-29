@@ -324,4 +324,46 @@ public class DataSorting {
         }
         return intCount1;
     }
+
+    public static int sortingPoints3(SportsList[] sportsArray, String strGameResult) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+        String strResults1;
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            strResults1 = sportsArray[intCount].getGameResult();
+            if(dblAverage >= 80 && dblAverage <= 100 && strGameResult.equalsIgnoreCase(strResults1)){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
+
+    public static int sortingPoints4(SportsList[] sportsArray, String strGameResult) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+        String strResults1;
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            strResults1 = sportsArray[intCount].getGameResult();
+            if(dblAverage >= 101 && dblAverage <= 120 && strGameResult.equalsIgnoreCase(strResults1)){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
+
+    public static int sortingPoints5(SportsList[] sportsArray, String strGameResult) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+        String strResults1;
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            strResults1 = sportsArray[intCount].getGameResult();
+            if(dblAverage >= 121 && strGameResult.equalsIgnoreCase(strResults1)){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
 }

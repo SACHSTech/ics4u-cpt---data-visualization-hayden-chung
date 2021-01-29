@@ -18,6 +18,12 @@ public class MainMenu extends Application {
     static int intTotal1;
     static int intTotal2;
     static int intTotal3;
+    static int intTotal4;
+    static int intTotal5;
+    static int intTotal6;
+    static int intTotal7;
+    static int intTotal8;
+    static int intTotal9;
     // Main Program
     public static void main(String[] args) throws IOException {
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
@@ -117,6 +123,9 @@ public class MainMenu extends Application {
                 System.out.println("Type 15 to see games where raptor scored between 80 and 100 points");
                 System.out.println("Type 16 to see games where raptor scored between 101 and 120 points");
                 System.out.println("Type 17 to see games where raptor scored greater than 120 points");
+                System.out.println("Type 18 to see games where raptor scored between 80 and 100 points in win or loss");
+                System.out.println("Type 19 to see games where raptor scored between 101 and 120 points in win or loss");
+                System.out.println("Type 20 to see games where raptor scored 121 or more in win or loss");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
                     // Print out games with a certain win or loss streak
@@ -195,16 +204,31 @@ public class MainMenu extends Application {
                     String strChoice1 = keyboard.readLine();
                     System.out.println("Total amount of wins or losses");
                     System.out.println(DataSorting.totalWins(sportsArray, strChoice1));
-                } else if(intOption == 15) {
+                } else if (intOption == 15) {
                     // Printing out total amount of games scored between 80-100
                     System.out.println(DataSorting.sortingPoints(sportsArray));
-                } else if(intOption == 16) {
+                } else if (intOption == 16) {
                     // Printing out total amount of games scored between 101-120
                     System.out.println(DataSorting.sortingPoints1(sportsArray));
-                } else if(intOption == 17) {
+                } else if (intOption == 17) {
                     // Printing out total amount of games scored between 121+
                     System.out.println(DataSorting.sortingPoints2(sportsArray));
-                } else {
+                } else if (intOption == 18) {
+                    // Printing out total amount of games scored between 80-100 in wins or losses
+                    System.out.println("Type W or L to choose games between 80-100 points");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.sortingPoints3(sportsArray, strChoice1 ));
+                }else if (intOption == 19) {
+                    // Printing out total amount of games scored between 101-120 in wins or losses
+                    System.out.println("Type W or L to choose games between 101-120 points");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.sortingPoints4(sportsArray, strChoice1));
+                } else if (intOption == 20) {
+                    // Printing out total amount of games scored 121 or more in wins or losses
+                    System.out.println("Type W or L to choose games between 120 points");
+                    String strChoice1 = keyboard.readLine();
+                    System.out.println(DataSorting.sortingPoints5(sportsArray, strChoice1));
+                }else {
                     System.out.println("Not an option");
                 }
             // Printing out charts
@@ -224,6 +248,12 @@ public class MainMenu extends Application {
                     intTotal1 = DataSorting.sortingPoints(sportsArray);
                     intTotal2 = DataSorting.sortingPoints1(sportsArray);
                     intTotal3 = DataSorting.sortingPoints2(sportsArray);
+                    intTotal4 = DataSorting.sortingPoints3(sportsArray, "W");
+                    intTotal5 = DataSorting.sortingPoints4(sportsArray, "W");
+                    intTotal6 = DataSorting.sortingPoints5(sportsArray, "W");
+                    intTotal7 = DataSorting.sortingPoints3(sportsArray, "L");
+                    intTotal8 = DataSorting.sortingPoints4(sportsArray, "L");
+                    intTotal9 = DataSorting.sortingPoints5(sportsArray, "L");
                     intOption3 = 2;
                     launch(args);
                     blnLoop = false;
@@ -242,7 +272,7 @@ public class MainMenu extends Application {
         if(intOption3 == 1){
             primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2)));
         } else if(intOption3 == 2) {
-            primaryStage.setScene(new Scene(charts.lineChart(intTotal1, intTotal2, intTotal3)));
+            primaryStage.setScene(new Scene(charts.lineChart(intTotal1, intTotal2, intTotal3, intTotal4, intTotal5, intTotal6, intTotal7, intTotal8, intTotal9)));
         }
         primaryStage.show();
     }

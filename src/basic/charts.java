@@ -49,7 +49,7 @@ public class charts {
     private static NumberAxis yAxis1;
 
 
-    public static Parent lineChart(int intTotal1, int intTotal2, int intTotal3) {
+    public static Parent lineChart(int intTotal1, int intTotal2, int intTotal3, int intTotal4, int intTotal5, int intTotal6, int intTotal7, int intTotal8, int intTotal9) {
         // Create title and axis
         xAxis1 = new CategoryAxis();
         yAxis1 = new NumberAxis("Total Number of games", 0.0, 60.0, 5.0);
@@ -65,6 +65,22 @@ public class charts {
         series.getData().add(new XYChart.Data<String, Number>(gamePoints[1], intTotal2));
         series.getData().add(new XYChart.Data<String, Number>(gamePoints[2], intTotal3));
         chart1.getData().add(series);
+
+        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+        series1.setName("Number of games scored within that Range in a Win");
+        series1.getData().add(new XYChart.Data<String, Number>(gamePoints[0], intTotal4));
+        series1.getData().add(new XYChart.Data<String, Number>(gamePoints[1], intTotal5));
+        series1.getData().add(new XYChart.Data<String, Number>(gamePoints[2], intTotal6));
+        chart1.getData().add(series1);
+
+        XYChart.Series<String, Number> series2 = new XYChart.Series<>();
+        series2.setName("Number of games scored within that Range in a Loss");
+        series2.getData().add(new XYChart.Data<String, Number>(gamePoints[0], intTotal7));
+        series2.getData().add(new XYChart.Data<String, Number>(gamePoints[1], intTotal8));
+        series2.getData().add(new XYChart.Data<String, Number>(gamePoints[2], intTotal9));
+        chart1.getData().add(series2);
+
+
         return chart1;
     }
 }
