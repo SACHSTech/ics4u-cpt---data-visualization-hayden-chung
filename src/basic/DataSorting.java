@@ -215,5 +215,43 @@ public class DataSorting {
         }
         return intCount1;
     }
-    
+
+    public static int sortingPoints(SportsList[] sportsArray) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            if(dblAverage >= 80 && dblAverage <= 100){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
+
+    public static int sortingPoints1(SportsList[] sportsArray) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            if(dblAverage >= 101 && dblAverage <= 120){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
+
+    public static int sortingPoints2(SportsList[] sportsArray) {
+        double dblAverage = 0;
+        int intCount1 = 0;
+
+        for(int intCount = 0; intCount < sportsArray.length; intCount++) {
+            dblAverage = sportsArray[intCount].getRaptorScore();
+            if(dblAverage >= 121){
+                intCount1++;
+            }
+        }
+        return intCount1;
+    }
 }
