@@ -1,7 +1,11 @@
 package basic;
 
 public class DataSorting {
-    
+    /** 
+     * Calculates average number of points scored by a raptor
+     * @param sportsArray - sports list array
+     * @return Average points scored
+     */
     public static double averagePoints(SportsList[] sportsArray) {
         double dblAverage = 0;
 
@@ -14,7 +18,11 @@ public class DataSorting {
         return dblAverage;
 
     }
-
+    /** 
+     * Calculates average number of points scored by a opponent
+     * @param sportsArray - sports list array
+     * @return Average points scored
+     */
     public static double averagePoints2(SportsList[] sportsArray) {
         double dblAverage = 0;
 
@@ -27,7 +35,12 @@ public class DataSorting {
         return dblAverage;
 
     }
-
+    /** 
+     * Search for games by specific opponent
+     * @param sportsArray - sports list array
+     * @param strOpponent - the opponent
+     * @return list of games by given opponent
+     */
     public static String searchOpponent(SportsList[] sportsArray, String strOpponent) {
         String strOpponent1;
         //String strOpponent2;
@@ -40,6 +53,12 @@ public class DataSorting {
         return "End of Opponents searched";
     }
 
+    /** 
+     * Sort home or away games
+     * @param sportsArray - sports list array
+     * @param strHome - away or home
+     * @return print out away or home games
+     */
     public static String searchHome(SportsList[] sportsArray, String strHome) {
         String strHomeGames;
         //String strOpponent2;
@@ -51,7 +70,12 @@ public class DataSorting {
         }
         return "End of home games list";
     }
-
+    /** 
+     * Search data for specific game
+     * @param sportsArray - sports list array
+     * @param intNumber - specific game number
+     * @return specific game
+     */
     public static String gameNumber(SportsList[] sportsArray, int intNumber) {
         int intGameNumber;
         for (int intCount = 0; intCount < sportsArray.length; intCount++) {
@@ -66,7 +90,12 @@ public class DataSorting {
             return "Game was not found";
         }
     }
-
+    
+    /** 
+     * Sort by Highest Points from raptors
+     * @param sportsArray - sports list array
+     * @return highest to lowest points
+     */
     public static String sortHighestPoints(SportsList[] sportsArray) {
 
         int intCurrentPoints;
@@ -88,6 +117,11 @@ public class DataSorting {
         return "Sorted by printing out Raptors Score from highest to lowest";
     }
 
+    /** 
+     * Sort by Lowest Points from raptors
+     * @param sportsArray - sports list array
+     * @return lowest to highest points
+     */
     public static String sortLowestPoints(SportsList[] sportsArray) {
 
         int intCurrentPoints;
@@ -108,7 +142,12 @@ public class DataSorting {
         }
         return "Sorted by printing out Raptors Score from lowest to highest";
     }
-
+    
+    /** 
+     * Sort by Highest Points from opponent
+     * @param sportsArray - sports list array
+     * @return highest to lowest points
+     */
     public static String sortHighestOpponentPoints(SportsList[] sportsArray) {
 
         int intCurrentPoints;
@@ -130,6 +169,11 @@ public class DataSorting {
         return "Sort games by Opponent Score from Highest to lowest";
     }
 
+    /** 
+     * Sort by lowest Points from opponent
+     * @param sportsArray - sports list array
+     * @return lowest to highest points
+     */
     public static String sortLowestOpponentPoints(SportsList[] sportsArray) {
 
         int intCurrentPoints;
@@ -150,7 +194,12 @@ public class DataSorting {
         }
         return "Sort games by Opponent Score from Lowest to highest";
     }
-
+    /** 
+     * Print out only wins or lost
+     * @param sportsArray - sports list array
+     * @param strResults - W or L
+     * @return Only wins or lost
+     */
     public static String searchResults(SportsList[] sportsArray, String strResults) {
         String strResults1;
         for (int intCount = 0; intCount < sportsArray.length; intCount++) {
@@ -161,14 +210,22 @@ public class DataSorting {
         }
         return "Sorted by wins or losses";
     }
-
+    /** 
+     * Print out only regular season games
+     * @param sportsArray - sports list array
+     * @return regular season games
+     */
     public static String searchRegular(SportsList[] sportsArray) {
         for(int intCount = 0; intCount < 82; intCount++) {
             System.out.println(sportsArray[intCount].toString());
         }
         return "Regular season games only";
     }
-
+    /** 
+     * Print out only playoff games
+     * @param sportsArray - sports list array
+     * @return playoff games
+     */
     public static String searchPlayoff(SportsList[] sportsArray) {
         for(int intCount = 0; intCount < sportsArray.length; intCount++) {
             if(intCount >= 82){
@@ -177,7 +234,7 @@ public class DataSorting {
         }
         return "Playoff games only";
     }
-
+    
     public static String searchWinStreak(SportsList[] sportsArray, String strGame) {
         String strGameStreak;
         //String strOpponent2;
