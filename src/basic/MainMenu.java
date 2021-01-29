@@ -97,6 +97,7 @@ public class MainMenu extends Application {
                 }
             SportsData.close();
             SportsData = new BufferedReader(new FileReader("src/basic/sports.csv"));
+            // Algorithms choice
             if (strChoice.equalsIgnoreCase("Algorithms")) {
                 System.out.println("Type out which algorithm you would like to use");
                 System.out.println("Type in 1 if you want to search a certain game streak");
@@ -119,73 +120,78 @@ public class MainMenu extends Application {
                 System.out.println("Type 18 to see games where raptor scored greater than 120 points");
                 intOption = Integer.parseInt(keyboard.readLine());
                 if (intOption == 1){
-                    System.out.println("Type a game streak for wins or losses and the amount next to it (From: L 1 - L 2 and W 1 - W 8 ");
+                    // Print out games with a certain win or loss streak
+                    System.out.println("Type a game streak for wins or losses and the amount next to it (From: L 1 - L 3 and W 1 - W 8 ");
                     strGameStreak = keyboard.readLine();
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.searchWinStreak(sportsArray, strGameStreak));
                 }else if (intOption == 2) {
-                    // Print out only playoff or regular season games
+                    // Print out only regular season games
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.searchRegular(sportsArray));
-                }else if (intOption == 3) {    
+                }else if (intOption == 3) { 
+                    // Print out only playoff games   
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.searchPlayoff(sportsArray));
                 } else if (intOption == 4) {
-                    // Sort Lowest Points
+                    // Sort by Lowest Points to Highest Points
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.sortLowestPoints(sportsArray));
                 } else if (intOption == 5){
+                    // Sort by Lowest Opponent Points to Highest Points
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.sortLowestOpponentPoints(sportsArray));
                 } else if (intOption == 6) {
-                    // Sort by wins or losses
+                    // Print out wins or losses
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println("Type W or L to sort Raptors Wins and losses");
                     strWinsOrLoss = keyboard.readLine();
                     System.out.println(DataSorting.searchResults(sportsArray, strWinsOrLoss));
                 } else if (intOption == 7) {
-                    // Sorting points from raptor and opponents
+                    // Sorting points from Highest to Lowest
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.sortHighestPoints(sportsArray));
                 } else if (intOption == 8) {
+                    // Sorting points from Highest to Lowest from opponents
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.sortHighestOpponentPoints(sportsArray));
                 } else if (intOption == 9){
-                    // Opponents
+                    // Type a certain opponent and print out only their games
                     System.out.println("Type in opponent you want to search");
                     strOpponentChoice = keyboard.readLine();
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.searchOpponent(sportsArray, strOpponentChoice));
                 } else if (intOption == 10) {
-                    // Away or Home games
+                    // Print out only away or home games
                     System.out.println("Type Away or Home");
                     strLocation = keyboard.readLine();
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.searchHome(sportsArray, strLocation));
                 } else if (intOption == 11) {
-                    // Average points scored for Raptors and Opponents
+                    // Average points scored for Raptors
                     System.out.println(DataSorting.averagePoints(sportsArray));
                 } else if (intOption == 12) {
+                    // Average points scored for opponents
                     System.out.println(DataSorting.averagePoints2(sportsArray));
                 } else if (intOption == 13) {
-                    // Search specific game number
+                    // Search specific game number and print results
                     System.out.println("Type a specific game number to print it out from 1-106");
                     intGameNumber1 = Integer.parseInt(keyboard.readLine());
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
                     System.out.println(" ");
                     System.out.println(DataSorting.gameNumber(sportsArray, intGameNumber1));
                 } else if (intOption == 14) {
-                    // Total losses or Wins
+                    // View only wins or losses
                     System.out.println("Type W or L to view only wins or losses");
                     String strChoice1 = keyboard.readLine();
                     System.out.println("#" + "   " + "     Date" + "              " + "Time" + "    " + "Location" + "       Opponent" + "       " + "Result" + "   Time    " + "  Raps Score " + " OpponentScore" + " "+ "Total Wins" + " " + "Total Losses" + " Game Streak");
@@ -198,22 +204,30 @@ public class MainMenu extends Application {
                     System.out.println("Total amount of wins or losses");
                     System.out.println(DataSorting.totalWins(sportsArray, strChoice1));
                 } else if(intOption == 16) {
+                    // Printing out total amount of games scored between 80-100
                     System.out.println(DataSorting.sortingPoints(sportsArray));
                 } else if(intOption == 17) {
+                    // Printing out total amount of games scored between 101-120
                     System.out.println(DataSorting.sortingPoints1(sportsArray));
                 } else if(intOption == 18) {
+                    // Printing out total amount of games scored between 121+
                     System.out.println(DataSorting.sortingPoints2(sportsArray));
-                } 
+                } else {
+                    System.out.println("Not an option");
+                }
+            // Printing out charts
             }else if(strChoice.equalsIgnoreCase("Chart")) {
                 System.out.println("Select a barchart: Type in 1");
                 System.out.println("Select a linegraph: Type in 2");
                 intOption2 = Integer.parseInt(keyboard.readLine());
+                // Showing BarChart
                 if(intOption2 == 1) {
                     intTotalWins2 = DataSorting.totalWins(sportsArray, "W");
                     intTotalLosses2 = DataSorting.totalWins(sportsArray, "L");
                     intOption3 = 1;
                     launch(args);
                     blnLoop = false;
+                // Showing LineChart
                 } else if(intOption2 == 2) {
                     intTotal1 = DataSorting.sortingPoints(sportsArray);
                     intTotal2 = DataSorting.sortingPoints1(sportsArray);
@@ -222,7 +236,7 @@ public class MainMenu extends Application {
                     launch(args);
                     blnLoop = false;
                 }
-                
+            // Exit Program
             }else if(strChoice.equalsIgnoreCase("exit")){
                 System.out.println("The program will now close");
                 blnLoop = false;
@@ -231,6 +245,7 @@ public class MainMenu extends Application {
     }
 
     //@Override
+    // Showing either barchar or linechart
     public void start(Stage primaryStage) throws Exception {
         if(intOption3 == 1){
             primaryStage.setScene(new Scene(charts.barChart(intTotalWins2, intTotalLosses2)));

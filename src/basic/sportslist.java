@@ -2,6 +2,8 @@ package basic;
 
 
 public class SportsList {
+
+    // Instance Variables
     private int intGameNumber;
     private String strDateNumber;
     private String strGameTime;
@@ -15,6 +17,21 @@ public class SportsList {
     private int intTotalLosses;
     private String strGameStreak;
 
+    /**  
+     * Constructor - creates a new sport instance
+     * @param gameNumber - the game number
+     * @param dateNumber - the game 
+     * @param gameTime - the game time
+     * @param gameLocation - home or away
+     * @param gameOpponent - the opponent
+     * @param gameResult - win or loss
+     * @param gameLength - legnth of game
+     * @param raptorScore - raptor's score
+     * @param opponentScore - opponent's score
+     * @param totalWins - total number of wins
+     * @param totalLosses - total number of losses
+     * @param gameStreak - streaks of wins or losses
+     */
     public SportsList(int gameNumber, String dateNumber, String gameTime, String gameLocation, String gameOpponent, String gameResult, String gameLength, int raptorScore, int opponentScore, int totalWins, int totalLosses, String gameStreak) {
         this.intGameNumber = gameNumber;
         this.strDateNumber = dateNumber;
@@ -29,7 +46,7 @@ public class SportsList {
         this.intTotalLosses = totalLosses;
         this.strGameStreak = gameStreak;
     }
-
+    /
     public int getGameNumber() {
         return intGameNumber;
     }
