@@ -12,4 +12,8 @@ Check the [VS Code, Java, and JavaFX Install and Set Up](https://docs.google.com
 
 ### Data Description
 
-The data I used is for 
+The data I used is for this is the 2018 - 2019 Raptors season. It gives information like the game number, game opponent, Raptor score, opponent score and much more. With many great seasons that Raptors had, I believe this is the greatest Raptor season where they went to the finals. This season had the most games and overall, had the most content to work with.
+
+### Link to data set
+
+Click here for dataset: [Click here](https://www.basketball-reference.com/teams/TOR/2019.html)
