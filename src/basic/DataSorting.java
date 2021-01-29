@@ -381,7 +381,12 @@ public class DataSorting {
         }
         return intCount1;
     }
-
+    /** 
+     * Returning games finished in selected time
+     * @param sportsArray - sports list array
+     * @param strTime - Regulation, OT, or 2OT
+     * @return total number of games finished between a certain period of time
+     */
     public static int timeFind(SportsList[] sportsArray, String strTime) {
         int intCount1 = 0;
         String strResult;
