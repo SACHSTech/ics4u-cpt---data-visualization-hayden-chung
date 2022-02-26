@@ -4,7 +4,7 @@ public class DataSorting {
     /** 
      * Calculates average number of points scored by a raptor
      * @param sportsArray - sports list array
-     * @return Average points scored
+     * @return Average points score
      */
     public static double averagePoints(SportsList[] sportsArray) {
         double dblAverage = 0;
